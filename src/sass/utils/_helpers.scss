@@ -1,0 +1,67 @@
+#app,
+.h-100 {
+    height: 100%;
+}
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+.d-flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+.not-selected {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.underline::after {
+    background-color: #6C63FF;
+    border-radius: 50px;
+    content: '';
+    display: block;
+    height: 6px;
+    margin: 10px auto;
+    width: 28px;
+}
+.inset_box-shadow {
+    -webkit-box-shadow: $inset__box-shadow;
+    -moz-box-shadow: $inset__box-shadow;
+    box-shadow: $inset__box-shadow;
+}
+
+.form-group {
+    line-height: toRem(28px);
+    margin-bottom: toRem(25px);
+
+    label {
+        font-weight: 600;
+    }
+    .formField {
+        background-color: rgb(238, 238, 238);
+        border-radius: 4px;
+        outline: 1px solid rgb(237 237 237);
+        padding: toRem(14px) toRem(10px);
+        width: 100%;
+    }
+    textarea {
+        max-height: toRem(250px);
+        min-height: toRem(150px);
+    }
+}

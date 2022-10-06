@@ -1,11 +1,20 @@
 
 <template>
-    <main>
+    <main class="h-100">
         <HeroSection />
+        <ContactSection />
     </main>
 </template>
 
-<script setup>
+<script>
 import HeroSection from '../layouts/HeroSection.vue';
+import ContactSection from '../layouts/ContactSection.vue';
+
+export default {
+    components: {
+        HeroSection,
+        ContactSection
+    }
+}
 
 </script>

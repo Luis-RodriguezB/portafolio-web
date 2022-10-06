@@ -1,11 +1,29 @@
+// BREAKPOINTS
+$small__device: 481px;
+$medium__device: 769px;
+$large_device: 1025px;
+$extra_large__device: 1201px;
+
+$breakpoints: (
+  'small':  ( min-width:  $small__device ),
+  'medium':  ( min-width:  $medium__device ),
+  'large': ( min-width:  $large_device ),
+  'extra_large':  ( min-width: $extra_large__device )
+) !default;
 
 
-$color__primary: #333;
+$color__primary: #746dfa;
+$color__white: white;
 
 $background__color: #EFEFEF;
 $background__color--dark: #222;
 
 $font__primary: 'Roboto', sans-serif;
 $font__secondary: 'Open Sans', sans-serif;
+
+$inset__box-shadow: inset 0px 0px 25px 0.5px rgba(0, 0, 0, 0.2);
+
+$text-shadow_title: 0px 4px 5px rgba(0, 0, 0, 0.25);
+$text-shadow__subtitle: -3px 0px 2px rgba(116,109,250,0.2);
 
 

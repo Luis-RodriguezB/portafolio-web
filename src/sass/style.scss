@@ -1,4 +1,28 @@
 @import './utils/functions';
 @import './utils/variables';
+@import './utils/mixins';
 @import './base/reset';
 @import './utils/helpers';
+@import './layout/sections';
+
+h1 { font-size: 2.3rem; }
+h2 { font-size: 2rem; }
+
+p, span { font-size: 1.125rem; }
+
+@media screen and (min-width: $medium__device) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2.2rem; }
+}
+
+@media screen and (min-width: $large_device) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.4rem; }
+
+    p, span { font-size: 1.25rem; }
+}
+
+@media screen and (min-width: $extra_large__device) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.6rem; }
+  }
