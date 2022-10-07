@@ -19,3 +19,27 @@
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@mixin min-width($bp) {
+  @media screen and (min-width: $bp) {
+      @content;
+  }
+}
+
+@mixin min-height($bp) {
+  @media screen and (min-height: $bp) {
+      @content;
+  }
+}
+
+@mixin max-width($bp) {
+  @media screen and (max-width: $bp) {
+      @content;
+  }
+}
+
+@mixin max-height($bp) {
+  @media screen and (max-height: $bp) {
+      @content;
+  }
+}

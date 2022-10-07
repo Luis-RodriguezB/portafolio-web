@@ -6,7 +6,10 @@
 @import './layout/sections';
 
 //Components
+@import './components/navLinks';
 @import './components/inputField';
+@import './components/button';
+@import './components/card';
 
 h1 { font-size: 2.3rem; }
 h2 { font-size: 2rem; }

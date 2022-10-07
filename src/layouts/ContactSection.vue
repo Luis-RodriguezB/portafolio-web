@@ -6,7 +6,7 @@
     sectionClass="container"
     containerClass="contact__container"
     titleClass="text-center underline"
-    descriptionClass="contact__description text-center"
+    descriptionClass="description-text text-center"
   >
     <form autocomplete="off">
       <InputField
@@ -30,7 +30,7 @@
         label="Descripción"
         v-model="formData.description"
       />
-      <button>Hola</button>
+      <CustomButton type="submit" text="Enviar" class="btn btn-primary" />
     </form>
   </SectionContainer>
 </template>
@@ -45,6 +45,7 @@ export default {
   components: {
     SectionContainer,
     InputField,
+    CustomButton
   },
   setup() {
     const formData = ref({

@@ -6,14 +6,17 @@
     letter-spacing: toRem(1.8px);
     text-shadow: $text-shadow_title;
   }
+
   .hero__subtitle {
     color: $color__primary;
     font-weight: 800;
     text-shadow: $text-shadow__subtitle;
   }
+
   .hero__description {
     margin: toRem(45px) 0px;
   }
+
   .hero__image-continer {
     margin: 0 auto;
     max-width: 95%;
@@ -35,20 +38,113 @@
   }
 }
 
+.skill-section {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 60, 0.6), rgba(0, 0, 40, .6)), url('/assets/images/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color__white;
+  padding: toRem(35px) toRem(20px);
+}
+
+.project-section {
+  border-bottom: 1px solid rgb(211, 211, 211, .5);
+  padding: toRem(70px) toRem(20px);
+
+  .project-container {
+    height: 100%;
+    width: 100%;
+
+    .slider-container {
+      flex: 1 1;
+      margin: 0px auto;
+      max-width: toRem(1120px);
+      width: 100%;
+    }
+    
+    .slide-content {
+      margin: toRem(40px) 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .swiper  {
+        position: static;
+
+        .swiper-wrapper {
+          padding: toRem(10px) 0;
+        }
+      }
+
+      .card-wrapper {
+        width: 100%;
+      }
+    }
+  }
+  @include respond-to('medium') {
+    .slide-content {
+      margin-left: toRem(30px);
+      margin-right: toRem(30px);
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+  }
+  @include respond-to('extra_large') {
+    .swiper-button-prev {
+      left: toRem(-45px);
+    }
+    .swiper-button-next {
+      right: toRem(-45px);
+    }
+  }
+  @include max-width(955px) {
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
 .contact__container {
   width: 90%;
   padding: toRem(35px) 0;
-
-  .contact__description {
-    display: block;
-    margin: toRem(40px) 0px;
-    font-size: inherit;
-  }
 
   @include respond-to('medium') {
     max-width: 550px;
   }
   @include respond-to('large') {
     max-width: 650px;
+  }
+}
+
+.footer-section {
+  height: 8vh;
+  padding: toRem(10px);
+
+  .footer__links {
+    .footer__link {
+      margin: 0 toRem(20px);
+      font-size: toRem(32px);
+
+      .link {
+        transition: $transition_link;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+  @include respond-to('medium') {
+    display: none;
   }
 }

@@ -1,0 +1,80 @@
+.card {
+    width: toRem(320px);
+    border-radius: toRem(25px);
+    background-color: $color__white;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .card__image-content,
+    .card__content {
+        padding: toRem(10px) toRem(14px);
+    }
+
+    .card__image-content {
+        position: relative;
+        row-gap: toRem(5px);
+        padding: toRem(25px) 0;
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $color__primary;
+            border-radius: toRem(25px) toRem(25px) 0 toRem(25px);
+
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: toRem(-40px);
+                height: toRem(40px);
+                width: toRem(40px);
+                background-color: $color__primary;
+            }
+            &::after {
+                border-radius: 0 toRem(25px) 0 0;
+                background-color: $color__white;
+            }
+        }
+
+        .card__image {
+            background-color: $color__white;
+            padding: toRem(3px);
+            position: relative;
+            border-radius: toRem(10px);
+            width: 80%;
+
+            .card__img {
+                border: 3px solid $color__primary;
+                border-radius: toRem(10px);
+            }
+        }
+
+    }
+    
+    .card__content {
+        
+        .card__title {
+            margin-top: toRem(5px);
+        }
+        .card__description {
+            font-size: toRem(18px);
+            margin: toRem(10px) 0;
+            color: $color__black;
+        }
+        .btn-card {
+            color: $color__primary;
+            text-decoration: underline;
+            margin: 0 toRem(5px) toRem(5px) auto;
+            
+            &:hover {
+                color: darken($color__primary, $amount: 5);
+            }
+        }
+    }
+    @include max-width(360px) {
+        width: toRem(256px);
+    }
+}

@@ -8,18 +8,28 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  height: 1px;
+
+  @include max-height(740px) {
+    min-height: toRem(740px);
+  }
+  @include min-height(930px) {
+    min-height: min-content;
+    height: 100%;;
+    max-height: toRem(930px);
+  }
 }
 .d-flex {
   display: flex;
-}
-.flex-row {
-  flex-direction: row;
 }
 .flex-column {
   flex-direction: column;
 }
 .justify-center {
   justify-content: center;
+}
+.align-center {
+  align-items: center;
 }
 
 .text-center {
@@ -44,4 +54,9 @@
   -webkit-box-shadow: $inset__box-shadow;
   -moz-box-shadow: $inset__box-shadow;
   box-shadow: $inset__box-shadow;
+}
+.description-text {
+  display: block;
+  margin: toRem(40px) 0px;
+  font-size: inherit;
 }
