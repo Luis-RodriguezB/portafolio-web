@@ -1,10 +1,10 @@
 <template>
   <SectionContainer
+    title="Luis Rodríguez Baltodano"
+    description="Software Developer"
+    titleType="Heading_1"
     sectionClass="inset_box-shadow container"
     containerClass="hero__content text-center"
-    title="Luis Rodríguez Baltodano"
-    titleType="Heading_1"
-    description="Software Developer"
     descriptionClass="hero__subtitle not-selected"
   >
     <p class="hero__description">
@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import SectionContainer from "../components/SectionContainer.vue";
-import Image from "../components/Image.vue";
+import SectionContainer from '../components/SectionContainer.vue';
+import Image from '../components/Image.vue';
 
 export default {
   components: {

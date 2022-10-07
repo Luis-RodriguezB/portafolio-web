@@ -21,7 +21,7 @@
       @input="$emit('update:modelValue', $event.target.value)"
     />
     <span v-if="errors.length > 0" class="error-message">
-      {{ typeof errors === "string" ? errors : errors[0].$message }}
+      {{ typeof errors === 'string' ? errors : errors[0].$message }}
     </span>
   </div>
 </template>
@@ -31,18 +31,18 @@ export default {
   props: {
     inputContainerClass: {
       type: String,
-      default: "form-group",
+      default: 'form-group',
     },
     label: {
       type: String,
     },
     typeField: {
       type: String,
-      default: "text",
+      default: 'text',
     },
     inputClass: {
       type: String,
-      default: "formField",
+      default: 'formField',
     },
     id: {
       type: String,
@@ -52,8 +52,8 @@ export default {
       type: String,
     },
     modelValue: {
-        type: String,
-        default: ''
+      type: String,
+      default: '',
     },
     errors: {
       type: [String, Array],

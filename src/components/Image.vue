@@ -1,21 +1,23 @@
 <template>
-    <div :class="classContainer">
-        <img :src="src" :alt="alt" v-bind="$attrs">
-    </div>
+  <div :class="classContainer">
+    <img :src="src" :alt="alt" v-bind="$attrs" />
+  </div>
 </template>
 
-<script setup>
-defineProps({
+<script>
+export default {
+  props: {
     classContainer: {
-        type: String
+      type: String,
     },
     src: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     alt: {
-        type: String,
-        required: true
-    }
-});
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>

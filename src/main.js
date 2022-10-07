@@ -12,4 +12,4 @@ library.add(...icons);
 createApp(App)
     .use(router)
     .component('font-awesome-icon', FontAwesomeIcon)
-    .mount('#app')
+    .mount('#app');

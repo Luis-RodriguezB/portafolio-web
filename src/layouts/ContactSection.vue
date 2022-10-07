@@ -1,11 +1,11 @@
 <template>
   <SectionContainer
+    title="Contáctame"
+    description="Ponte en contacto conmigo y te escribiré pronto"
+    titleType="Heading_2"
     sectionClass="container"
     containerClass="contact__container"
-    title="Contáctame"
-    titleType="Heading_2"
     titleClass="text-center underline"
-    description="Ponte en contacto conmigo y te escribiré pronto"
     descriptionClass="contact__description text-center"
   >
     <form autocomplete="off">
@@ -30,7 +30,7 @@
         label="Descripción"
         v-model="formData.description"
       />
-      <button type="submit">Send</button>
+      <button>Hola</button>
     </form>
   </SectionContainer>
 </template>
@@ -39,6 +39,7 @@
 import { ref } from 'vue';
 import SectionContainer from '../components/SectionContainer.vue';
 import InputField from '../components/InputField.vue';
+import CustomButton from '../components/CustomButton.vue';
 
 export default {
   components: {

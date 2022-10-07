@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/Home.vue'
+import Home from '../views/Home.vue';
 
 const removeHash = (to) => {
   if (to.hash) return { path: to.path, query: to.query, has: '' };
@@ -14,23 +14,23 @@ const routes = [
     path: '/home',
     name: 'home',
     component: Home,
-    beforeEnter: [removeHash]
-  }
+    beforeEnter: [removeHash],
+  },
 ];
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes,
-    scrollBehavior (to, from, savedPosition) {
-        if (to.hash) {
-            return {
-              behavior: "smooth",
-              el: to.hash,
-              top: 50
-            };
-        }
-        return { top: 0 };
+  history: createWebHashHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        behavior: 'smooth',
+        el: to.hash,
+        top: 50,
+      };
     }
+    return { top: 0 };
+  },
 });
 
 export default router;

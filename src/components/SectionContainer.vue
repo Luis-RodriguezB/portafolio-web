@@ -3,8 +3,10 @@
     <div :class="containerClass">
       <h1 v-if="titleType === 'Heading_1'" :class="titleClass">{{ title }}</h1>
       <h2 v-else :class="titleClass">{{ title }}</h2>
-      <span v-if="description" :class="descriptionClass">{{ description }}</span>
-      
+      <span v-if="description" :class="descriptionClass">{{
+        description
+      }}</span>
+
       <div v-bind="$attrs">
         <slot></slot>
       </div>
@@ -19,7 +21,7 @@ export default {
       type: String,
     },
     containerClass: {
-      type: String
+      type: String,
     },
     title: {
       type: String,
@@ -30,14 +32,14 @@ export default {
       default: 'Heading_1',
     },
     titleClass: {
-      type: String
+      type: String,
     },
     description: {
       type: String,
     },
     descriptionClass: {
-      type: String
-    }
+      type: String,
+    },
   },
 };
 </script>

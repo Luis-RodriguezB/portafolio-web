@@ -1,0 +1,19 @@
+.form-group {
+  line-height: toRem(28px);
+  margin-bottom: toRem(25px);
+
+  label {
+    font-weight: 600;
+  }
+  .formField {
+    background-color: rgb(238, 238, 238);
+    border-radius: 4px;
+    outline: 1px solid rgb(237 237 237);
+    padding: toRem(14px) toRem(10px);
+    width: 100%;
+  }
+  textarea {
+    max-height: toRem(250px);
+    min-height: toRem(150px);
+  }
+}
