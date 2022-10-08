@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SectionContainer from "../components/SectionContainer.vue";
+import SectionContainer from '../components/SectionContainer.vue';
 
 export default {
   components: {

@@ -45,7 +45,7 @@ export default {
   components: {
     SectionContainer,
     InputField,
-    CustomButton
+    CustomButton,
   },
   setup() {
     const formData = ref({

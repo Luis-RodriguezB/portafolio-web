@@ -8,49 +8,36 @@
     descriptionClass="text-center description-text"
     containerClass="project-container d-flex flex-column"
   >
-    <div class="slider-container">
-      <div class="slide-content">
-        <swiper
-          :modules="swiperOptions.modules"
-          :breakpoints="swiperOptions.breakpoints"
-          :slides-per-view="swiperOptions.slidesPerView"
-          :space-between="swiperOptions.spaceBetween"
-          :loop="swiperOptions.loop"
-          :pagination="swiperOptions.pagination"
-          navigation
-          @swiper="onSwiper"
-          @slideChange="onSlideChange"
-        >
-          <swiper-slide v-for="n in 9" :key="n">
-            <Card
-              srcImage="/assets/images/coding-guy.png"
-              altImage="Coding guy"
-              title="Proyect test"
-              tools="Javascript, HTML y CSS"
-              href="#"
-            />
-          </swiper-slide>
-        </swiper>
-      </div>
-    </div>
+    <Slider
+      sliderContainerClass="slider-container"
+      slideContentClass="slide-content"
+      :swiperOptions="swiperOptions"
+    >
+      <swiper-slide v-for="n in 9" :key="n">
+        <Card
+          srcImage="/assets/images/coding-guy.png"
+          altImage="Coding guy"
+          title="Proyect test"
+          tools="Javascript, HTML y CSS"
+          href="#"
+        />
+      </swiper-slide>
+    </Slider>
   </SectionContainer>
 </template>
 
 <script>
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import SectionContainer from "../components/SectionContainer.vue";
-import Card from "../components/Card.vue";
-
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper';
+import { SwiperSlide } from 'swiper/vue';
+import SectionContainer from '../components/SectionContainer.vue';
+import Slider from '../components/Slider.vue';
+import Card from '../components/Card.vue';
 
 export default {
   components: {
-    Swiper,
     SwiperSlide,
     SectionContainer,
+    Slider,
     Card,
   },
   setup() {
@@ -62,8 +49,8 @@ export default {
       modules: [Navigation, Pagination, Scrollbar, A11y, EffectFade],
       breakpoints: {
         240: {
-            slidesPerView: 1,
-            spaceBetween: 15,
+          slidesPerView: 1,
+          spaceBetween: 15,
         },
         769: {
           slidesPerView: 2,
@@ -75,13 +62,12 @@ export default {
           spaceBetween: 45,
         },
       },
+      onSwiper: () => console.log('onSwiper called'),
+      onSlideChange: () => console.log('Slide change'),
     };
 
     return {
       swiperOptions,
-
-      onSwiper: () => console.log("onSwiper called"),
-      onSlideChange: () => console.log("Slide change"),
     };
   },
 };

@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import CustomButton from "../components/CustomButton.vue";
-import getPersonalInfo from "../data/getPersonalInfo";
+import CustomButton from '../components/CustomButton.vue';
+import getPersonalInfo from '../data/getPersonalInfo';
 
 export default {
   components: {

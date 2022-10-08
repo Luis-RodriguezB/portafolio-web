@@ -27,7 +27,7 @@ export default {
     },
     titleType: {
       type: String, // Heading_1 => h1 | Heading_2 => h2
-      default: "Heading_1",
+      default: 'Heading_1',
     },
     titleClass: {
       type: String,

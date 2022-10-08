@@ -1,11 +1,7 @@
 <template>
   <nav class="navLink">
     <ul class="navLink__list d-flex justify-center align-center flex-column">
-      <li
-        class="navLink__link"
-        v-for="item in data"
-        :key="item.title"
-      >
+      <li class="navLink__link" v-for="item in data" :key="item.title">
         <CustomButton
           typeButton="link"
           class="link"
@@ -23,8 +19,8 @@
 </template>
 
 <script>
-import CustomButton from "./CustomButton.vue";
-import getPersonalInfo from "../data/getPersonalInfo";
+import CustomButton from './CustomButton.vue';
+import getPersonalInfo from '../data/getPersonalInfo';
 
 export default {
   components: {
