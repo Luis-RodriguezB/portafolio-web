@@ -50,7 +50,6 @@
 }
 
 .project-section {
-  border-bottom: 1px solid rgb(211, 211, 211, 0.5);
   padding: toRem(70px) toRem(20px);
 
   .project-container {
@@ -80,7 +79,6 @@
         }
       }
     }
-    
   }
   @include respond-to('medium') {
     .slide-content {
@@ -125,24 +123,42 @@
 }
 
 .footer-section {
-  height: 8vh;
-  padding: toRem(10px);
+  height: toRem(200px);
+  padding: toRem(40px) toRem(45px) toRem(5px) toRem(45px);
 
-  .footer__links {
-    .footer__link {
-      margin: 0 toRem(20px);
-      font-size: toRem(32px);
+  .footer__top {
+    margin-bottom: toRem(31px);
 
-      .link {
-        transition: $transition_link;
+    .footer__social-title {
+      margin-bottom: toRem(15px);
+      color: $color__primary;
+    }
+    .footer__social-links {
+      .footer__social-link {
+        margin-right: toRem(35px);
+        font-size: toRem(28px);
 
-        &:hover {
-          transform: scale(1.15);
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        .link {
+          transition: $transition_link;
+
+          &:hover {
+            transform: scale(1.15);
+          }
         }
       }
     }
   }
-  @include respond-to('medium') {
-    display: none;
+  .footer__lower {
+    min-height: toRem(80px);
+    border-top: 2px solid $color__primary;
+    
+    .footer__lower-text {
+      font-size: toRem(16px);
+      text-align: center;
+    }
   }
 }

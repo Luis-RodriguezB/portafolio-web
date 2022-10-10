@@ -1,8 +1,9 @@
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
 export default [
-    faLinkedin,
+    faLinkedinIn,
     faGithub,
-    faAddressBook
+    faAddressBook,
+    faEnvelope
 ];

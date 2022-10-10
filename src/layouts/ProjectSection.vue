@@ -3,7 +3,7 @@
     title="Mis proyectos"
     description="Proyectos personales en los cuales he podido desarrollar mis habilidades"
     titleType="Heading_2"
-    sectionClass="container project-section"
+    sectionClass="container project-section border-bottom"
     titleClass="text-center underline"
     descriptionClass="text-center description-text"
     containerClass="project-container d-flex flex-column"

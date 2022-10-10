@@ -1,20 +1,28 @@
 <template>
-  <footer class="footer-section d-flex justify-center align-center flex-column">
-    <ul class="footer__links d-flex justify-center align-center">
-      <li class="footer__link" v-for="item in data" :key="item.title">
-        <CustomButton
-          typeButton="link"
-          class="link d-flex justify-center align-center"
-          :style="item.color && { color: item.color }"
-          :href="item.url"
-          :title="item.title"
-          :icon="`${
-            item.icon === 'fa-address-book' ? 'fa-solid' : 'fa-brands'
-          } ${item.icon}`"
-          target="_blank"
-        />
-      </li>
-    </ul>
+  <footer
+    class="footer-section d-flex flex-column justify-between align-center"
+  >
+    <div class="footer__top d-flex flex-column align-center">
+      <h3 class="footer__social-title">Social</h3>
+      <ul class="footer__social-links d-flex">
+        <li class="footer__social-link" v-for="item in data" :key="item.title">
+          <CustomButton
+            typeButton="link"
+            class="link d-flex justify-center align-center"
+            :href="item.url"
+            :title="item.title"
+            :icon="`${item.icon}`"
+            :target="item.title === 'Email' ? '_self' : '_blank'"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="footer__lower d-flex justify-center align-center">
+      <p class="footer__lower-text">
+        &copy; {{ new Date().getFullYear() }}. Creado por Luis Rodríguez
+        Baltodano
+      </p>
+    </div>
   </footer>
 </template>
 

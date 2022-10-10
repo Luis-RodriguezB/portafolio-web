@@ -34,6 +34,7 @@
                 background-color: $color__primary;
             }
             &::after {
+                width: toRem(42px);
                 border-radius: 0 toRem(25px) 0 0;
                 background-color: $color__white;
             }

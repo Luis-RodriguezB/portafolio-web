@@ -12,8 +12,17 @@
     padding: toRem(14px) toRem(10px);
     width: 100%;
   }
+  .is-invalid {
+    outline: 2px solid $color__danger;
+  }
   textarea {
     max-height: toRem(250px);
     min-height: toRem(150px);
+  }
+
+  .error-message {
+    font-size: toRem(12px);
+    font-weight: 600;
+    color: $color__danger;
   }
 }

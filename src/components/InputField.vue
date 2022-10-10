@@ -6,7 +6,7 @@
       :id="id"
       :name="id"
       :placeholder="placeholder"
-      :class="inputClass"
+      :class="[inputClass, { 'is-invalid': errors.length > 0 }]"
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     ></textarea>
@@ -16,7 +16,7 @@
       :id="id"
       :name="id"
       :placeholder="placeholder"
-      :class="inputClass"
+      :class="[inputClass, { 'is-invalid': errors.length > 0 }]"
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     />

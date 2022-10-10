@@ -18,4 +18,8 @@
     &:hover {
         background-color: darken($color__primary, $amount: 5);
     }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: lighten($color__primary, $amount: 6);
+    }
 }
