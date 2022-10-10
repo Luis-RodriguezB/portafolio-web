@@ -20,25 +20,23 @@
   }
 }
 
-@mixin min-width($bp) {
+@mixin respond-to-min-width($bp) {
   @media screen and (min-width: $bp) {
       @content;
   }
 }
+@mixin respond-to-max-width($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
 
-@mixin min-height($bp) {
+@mixin respond-to-min-height($bp) {
   @media screen and (min-height: $bp) {
       @content;
   }
 }
-
-@mixin max-width($bp) {
-  @media screen and (max-width: $bp) {
-      @content;
-  }
-}
-
-@mixin max-height($bp) {
+@mixin respond-to-max-height($bp) {
   @media screen and (max-height: $bp) {
       @content;
   }

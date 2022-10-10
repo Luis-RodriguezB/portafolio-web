@@ -100,7 +100,7 @@
       right: toRem(-45px);
     }
   }
-  @include max-width(955px) {
+  @include respond-to-max-width(955px) {
     .swiper-button-prev {
       display: none;
     }

@@ -75,7 +75,7 @@
             }
         }
     }
-    @include max-width(360px) {
+    @include respond-to-max-width(360px) {
         width: toRem(256px);
     }
 }
