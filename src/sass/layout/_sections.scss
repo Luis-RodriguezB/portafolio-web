@@ -26,13 +26,16 @@
     .hero__title {
       margin-bottom: toRem(6px);
     }
+
     .hero__image-continer {
       max-width: 350px;
     }
   }
+
   @include respond-to('medium') {
     max-width: 70%;
   }
+
   @include respond-to('large') {
     max-width: 60%;
   }
@@ -47,6 +50,22 @@
   background-size: cover;
   color: $color__white;
   padding: toRem(35px) toRem(20px);
+
+  .skills-container {
+    flex: 1 1;
+
+    .skill-list {
+      max-width: 1120px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      @include respond-to-min-width(680px) {
+        justify-content: space-between;
+      }
+    }
+  }
 }
 
 .project-section {
@@ -80,30 +99,37 @@
       }
     }
   }
+
   @include respond-to('medium') {
     .slide-content {
       margin-left: toRem(30px);
       margin-right: toRem(30px);
     }
+
     .swiper-button-prev {
       left: 0;
     }
+
     .swiper-button-next {
       right: 0;
     }
   }
+
   @include respond-to('extra_large') {
     .swiper-button-prev {
       left: toRem(-45px);
     }
+
     .swiper-button-next {
       right: toRem(-45px);
     }
   }
+
   @include respond-to-max-width(955px) {
     .swiper-button-prev {
       display: none;
     }
+
     .swiper-button-next {
       display: none;
     }
@@ -117,6 +143,7 @@
   @include respond-to('medium') {
     max-width: 550px;
   }
+
   @include respond-to('large') {
     max-width: 650px;
   }
@@ -133,6 +160,7 @@
       margin-bottom: toRem(15px);
       color: $color__primary;
     }
+
     .footer__social-links {
       .footer__social-link {
         margin-right: toRem(35px);
@@ -152,10 +180,11 @@
       }
     }
   }
+
   .footer__lower {
     min-height: toRem(80px);
     border-top: 2px solid $color__primary;
-    
+
     .footer__lower-text {
       font-size: toRem(16px);
       text-align: center;

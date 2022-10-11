@@ -69,3 +69,8 @@
   margin: toRem(40px) 0px;
   font-size: inherit;
 }
+.two-column {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+}
