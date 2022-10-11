@@ -1,0 +1,42 @@
+.hero__content {
+    margin: auto;
+    max-width: 95%;
+
+    .hero__title {
+        letter-spacing: toRem(1.8px);
+        text-shadow: $text-shadow_title;
+    }
+
+    .hero__subtitle {
+        color: $color__primary;
+        font-weight: 800;
+        text-shadow: $text-shadow__subtitle;
+    }
+
+    .hero__description {
+        margin: toRem(45px) 0px;
+    }
+
+    .hero__image-continer {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    @include respond-to('small') {
+        .hero__title {
+            margin-bottom: toRem(6px);
+        }
+
+        .hero__image-continer {
+            max-width: 350px;
+        }
+    }
+
+    @include respond-to('medium') {
+        max-width: 70%;
+    }
+
+    @include respond-to('large') {
+        max-width: 60%;
+    }
+}

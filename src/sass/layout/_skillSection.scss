@@ -1,0 +1,40 @@
+.skill-section {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0, 0, 60, 0.6), rgba(0, 0, 40, 0.6)),
+        url('/assets/images/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color__white;
+    padding: toRem(35px) toRem(20px);
+    min-height: auto;
+    height: auto;
+
+    .skills-container {
+        flex: 1 1;
+
+        .skill-list {
+            max-width: 1120px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @include respond-to-min-width(680px) {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+        min-height: 100vh;
+        height: 1px;
+    }
+
+    @include respond-to-min-height(930px) {
+        min-height: min-content;
+        height: 100%;
+        ;
+        max-height: toRem(930px);
+    }
+}

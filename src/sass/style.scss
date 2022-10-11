@@ -3,7 +3,13 @@
 @import './utils/mixins';
 @import './base/reset';
 @import './utils/helpers';
-@import './layout/sections';
+
+//Sections
+@import './layout/heroSection';
+@import './layout/skillSection';
+@import './layout/projectSection';
+@import './layout/contactSection';
+@import './layout/footerSection';
 
 //Components
 @import './components/navLinks';
