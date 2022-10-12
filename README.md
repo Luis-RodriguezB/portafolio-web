@@ -1,6 +1,6 @@
 # Portafolio web
 
-Hecho con Vitejs, Vue 3, SASS, Javascript.
+Hecho con Vitejs, Vue 3, SASS, Javascript. <br>
 Este proyecto fue creado y diseñado por Luis Rodríguez Baltodano.
 
 ### Para correr el proyecto se necesita:
