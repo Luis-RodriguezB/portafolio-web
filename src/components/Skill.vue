@@ -9,7 +9,7 @@
     </p>
     <ul :class="['skills_list', knowledge.length > 4 && 'two-column']">
       <li v-for="item in knowledge" :key="item">
-        <Image src="/assets/images/check.svg" alt="check icon" classContainer="skills__icon" />
+        <Image src="/images/check.svg" alt="check icon" classContainer="skills__icon" />
         {{ item }}
       </li>
     </ul>
