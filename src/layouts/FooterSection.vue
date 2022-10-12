@@ -3,7 +3,6 @@
     class="footer-section d-flex flex-column justify-between align-center"
   >
     <div class="footer__top d-flex flex-column align-center">
-      <h3 class="footer__social-title">Social</h3>
       <ul class="footer__social-links d-flex">
         <li class="footer__social-link" v-for="item in data" :key="item.title">
           <CustomButton

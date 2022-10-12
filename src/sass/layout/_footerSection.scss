@@ -3,12 +3,7 @@
     padding: toRem(40px) toRem(45px) toRem(5px) toRem(45px);
 
     .footer__top {
-        margin-bottom: toRem(31px);
-
-        .footer__social-title {
-            margin-bottom: toRem(15px);
-            color: $color__primary;
-        }
+        margin-top: toRem(15px);
 
         .footer__social-links {
             .footer__social-link {
@@ -32,7 +27,7 @@
 
     .footer__lower {
         min-height: toRem(80px);
-        border-top: 2px solid $color__primary;
+        border-top: 3px solid $color__primary;
 
         .footer__lower-text {
             font-size: toRem(16px);

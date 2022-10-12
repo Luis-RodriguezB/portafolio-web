@@ -44,12 +44,17 @@
 </template>
 
 <script>
-import { ref, computed, nextTick } from 'vue';
+import { ref, computed } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
+import emailjs from 'emailjs-com';
 import validations from '../helpers/validations';
 import SectionContainer from '../components/SectionContainer.vue';
 import InputField from '../components/InputField.vue';
 import CustomButton from '../components/CustomButton.vue';
+
+const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+const USER_ID = import.meta.env.VITE_EMAIL_USER_ID;
 
 export default {
   components: {
@@ -77,7 +82,17 @@ export default {
       const isValid = await v$.value.$validate();
       if(!isValid) return;
 
-      e.target.reset();
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.value, USER_ID)
+        .then(() => {
+          console.log('Email enviado');
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+        .finally(() => {
+          e.target.reset();
+        });
     }
 
     return {

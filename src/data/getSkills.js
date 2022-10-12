@@ -12,15 +12,15 @@ export default [
         skills: ['HTML/CSS', 'Javascript', 'Typescript',  'Vuejs', 'Reactjs', 'Boostrap', 'SASS']
     },
     {
-        title: 'Habilidades blandas',
-        description: '',
-        icon: 'fa-solid fa-people-group',
-        skills: ['Comunicación', 'Trabajo en equipo', 'Autodidacta']
-    },
-    {
         title: 'Otras habilidades',
         description: '',
         icon: 'fa-solid fa-gear',
         skills: ['AEM', 'Git']
+    },
+    {
+        title: 'Habilidades blandas',
+        description: '',
+        icon: 'fa-solid fa-people-group',
+        skills: ['Comunicación', 'Trabajo en equipo', 'Autodidacta']
     },
 ];
