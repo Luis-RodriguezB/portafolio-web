@@ -3,6 +3,7 @@
     title="Luis Rodríguez Baltodano"
     description="Software Developer"
     titleType="Heading_1"
+    titleClass="hero__title"
     sectionClass="inset_box-shadow container"
     containerClass="hero__content text-center"
     descriptionClass="hero__subtitle not-selected"

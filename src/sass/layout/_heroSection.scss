@@ -5,6 +5,7 @@
     .hero__title {
         letter-spacing: toRem(1.8px);
         text-shadow: $text-shadow_title;
+        margin-bottom: toRem(5px);
     }
 
     .hero__subtitle {
