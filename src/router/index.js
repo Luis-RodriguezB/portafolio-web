@@ -11,7 +11,7 @@ const routes = [
     redirect: 'home',
   },
   {
-    path: '/home',
+    path: '/index',
     name: 'home',
     component: Home,
     beforeEnter: [removeHash],
