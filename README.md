@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+# Portafolio web
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Hecho con Vitejs, Vue 3, SASS, Javascript. <br>
+Este proyecto fue creado y diseñado por Luis Rodríguez Baltodano.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### Para correr el proyecto se necesita:
+- Una versión de node actual (v16 o superior)
+- Ejecutar npm install dentro del proyecto
+- Por ultimo, ejecutar el comando npm run dev
