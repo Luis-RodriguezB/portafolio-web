@@ -15,7 +15,7 @@
     >
       <swiper-slide v-for="n in 9" :key="n">
         <Card
-          srcImage="/assets/images/coding-guy.png"
+          srcImage="/images/coding-guy.png"
           altImage="Coding guy"
           title="Proyect test"
           tools="Javascript, HTML y CSS"

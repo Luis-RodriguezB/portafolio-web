@@ -16,7 +16,7 @@ export default [
   },
   {
     title: 'Resume',
-    url: '/assets/files/RESUME_TEST.pdf',
+    url: '/files/RESUME_TEST.pdf',
     icon: 'fa-regular fa-address-book',
   },
 ];

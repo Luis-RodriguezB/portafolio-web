@@ -15,7 +15,7 @@
     </p>
     <Image
       classContainer="hero__image-continer"
-      src="/assets/images/coding.svg"
+      src="/images/coding.svg"
       alt="Coding guy"
       draggable="false"
     />
