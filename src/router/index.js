@@ -8,11 +8,11 @@ const removeHash = (to) => {
 const routes = [
   {
     path: '/:pathMatch(.*)',
-    redirect: 'home',
+    redirect: 'index',
   },
   {
     path: '/index',
-    name: 'home',
+    name: 'index',
     component: Home,
     beforeEnter: [removeHash],
   },

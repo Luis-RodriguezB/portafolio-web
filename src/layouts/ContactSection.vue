@@ -47,10 +47,12 @@
 import { ref, computed } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import emailjs from 'emailjs-com';
-import validations from '../helpers/validations';
+
 import SectionContainer from '../components/SectionContainer.vue';
 import InputField from '../components/InputField.vue';
 import CustomButton from '../components/CustomButton.vue';
+import validations from '../helpers/validations';
+import useToast from '../composables/useToast';
 
 const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
@@ -63,12 +65,14 @@ export default {
     CustomButton,
   },
   setup() {
+    const toast = useToast();
     const formRef = ref(null);
     const formData = ref({
       name: '',
       email: '',
       description: '',
     });
+
     const rules = computed(() => {
       return {
         name: validations.name,
@@ -86,6 +90,7 @@ export default {
         .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.value, USER_ID)
         .then(() => {
           console.log('Email enviado');
+          toast.success('Correo enviado exitosamente');
         })
         .catch((error) => {
           console.log(error)
