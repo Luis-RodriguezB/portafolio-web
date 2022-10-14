@@ -9,7 +9,11 @@
     </p>
     <ul :class="['skills_list', knowledge.length > 4 && 'two-column']">
       <li v-for="item in knowledge" :key="item">
-        <Image src="/images/check.svg" alt="check icon" classContainer="skills__icon" />
+        <Image
+          src="/images/check.svg"
+          alt="check icon"
+          classContainer="skills__icon"
+        />
         {{ item }}
       </li>
     </ul>
@@ -17,10 +21,10 @@
 </template>
 
 <script>
-import Image from "../components/Image.vue";
+import Image from '../components/Image.vue';
 export default {
   components: {
-    Image
+    Image,
   },
   props: {
     title: {

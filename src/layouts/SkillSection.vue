@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import SectionContainer from "../components/SectionContainer.vue";
-import Skill from "../components/Skill.vue";
-import getSkills from "../data/getSkills";
+import SectionContainer from '../components/SectionContainer.vue';
+import Skill from '../components/Skill.vue';
+import getSkills from '../data/getSkills';
 
 export default {
   components: {

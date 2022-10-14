@@ -5,6 +5,7 @@
   label {
     font-weight: 600;
   }
+
   .formField {
     background-color: rgb(238, 238, 238);
     border-radius: 4px;
@@ -12,14 +13,16 @@
     padding: toRem(14px) toRem(10px);
     width: 100%;
   }
-  .is-invalid {
-    outline: 2px solid $color__danger;
-  }
+  
   textarea {
     max-height: toRem(250px);
     min-height: toRem(150px);
   }
 
+  .is-invalid {
+    outline: 2px solid $color__danger;
+  }
+  
   .error-message {
     font-size: toRem(12px);
     font-weight: 600;

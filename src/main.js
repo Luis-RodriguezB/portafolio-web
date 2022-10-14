@@ -1,19 +1,38 @@
 import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import Toast from 'vue-toastification';
 
 import router from './router';
 import icons from './icons';
 import App from './App.vue';
 
 import './sass/style.scss';
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
+import 'vue-toastification/dist/index.css';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
+const options = {
+    position: 'bottom-right',
+    maxToasts: 1,
+    transition: "Vue-Toastification__bounce",
+    transitionDuration: 750,
+    newestOnTop: true,
+    draggable: false,
+    pauseOnFocusLoss: false,
+    pauseOnHover: false,
+    timeout: 3000,
+    container: document.body,
+    hideProgressBar: false,
+    hideCloseButton: false,
+    icon: true
+}
 
 library.add(...icons);
 
 createApp(App)
     .use(router)
+    .use(Toast, options)
     .component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app');

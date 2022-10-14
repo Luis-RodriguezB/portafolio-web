@@ -1,10 +1,10 @@
 <template>
   <main class="h-100">
-    <HeroSection/>
-    <SkillSection/>
-    <ProjectSection/>
-    <ContactSection/>
-    <FooterSection/>
+    <HeroSection />
+    <SkillSection />
+    <ProjectSection />
+    <ContactSection />
+    <FooterSection />
   </main>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     SkillSection,
     ProjectSection,
     ContactSection,
-    FooterSection
+    FooterSection,
   },
 };
 </script>

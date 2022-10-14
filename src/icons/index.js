@@ -1,6 +1,6 @@
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAddressBook } from '@fortawesome/free-regular-svg-icons';
-import { 
+import {
     faDatabase,
     faLaptop,
     faPeopleGroup,

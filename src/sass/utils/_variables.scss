@@ -3,11 +3,6 @@
   --text_color: #000;
 }
 
-[data-theme="dark"] {
-  --background_color: #111;
-  --text_color: #FFF;
-}
-
 // BREAKPOINTS
 $small__device: 481px;
 $medium__device: 769px;
@@ -20,7 +15,6 @@ $breakpoints: (
   'large': ( min-width:  $large_device ),
   'extra_large':  ( min-width: $extra_large__device )
 ) !default;
-
 
 $color__primary: #746dfa;
 $color__white: white;
