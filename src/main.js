@@ -7,17 +7,18 @@ import router from './router';
 import icons from './icons';
 import App from './App.vue';
 
-import './sass/style.scss';
 import 'vue-toastification/dist/index.css';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import './sass/style.scss';
 
 const options = {
     position: 'bottom-right',
     maxToasts: 1,
     transition: "Vue-Toastification__bounce",
     transitionDuration: 750,
+    toastClassName: ['toast__custom'],
     newestOnTop: true,
     draggable: false,
     pauseOnFocusLoss: false,

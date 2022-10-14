@@ -76,3 +76,10 @@
   -moz-columns: 2;
   columns: 2;
 }
+.toast__custom {
+  border-radius: toRem(5px);
+  margin-left: toRem(10px);
+  max-width: toRem(350px);
+  min-width: toRem(250px);
+  width: 100%;
+}

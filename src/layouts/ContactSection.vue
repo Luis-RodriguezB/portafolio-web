@@ -14,7 +14,7 @@
         id="name"
         placeholder="Escribe tu nombre"
         label="Nombre"
-        v-model.trim="formData.name"
+        v-model.trim="v$.name.$model"
         :errors="v$.name.$errors"
       />
       <InputField
@@ -22,7 +22,7 @@
         id="email"
         placeholder="Escribe tu correo"
         label="Email"
-        v-model.trim="formData.email"
+        v-model.trim="v$.email.$model"
         :errors="v$.email.$errors"
       />
       <InputField
@@ -30,14 +30,14 @@
         id="description"
         placeholder="Escribe tu mensaje"
         label="Descripción"
-        v-model.trim="formData.description"
+        v-model.trim="v$.description.$model"
         :errors="v$.description.$errors"
       />
       <CustomButton
         text="Enviar"
         type="submit"
         class="btn btn-primary"
-        :disabled="v$.$invalid"
+        :disabled="v$.$invalid || !v$.$dirty || isSendingEmail"
       />
     </form>
   </SectionContainer>
@@ -65,6 +65,7 @@ export default {
     CustomButton,
   },
   setup() {
+    const isSendingEmail = ref(false);
     const toast = useToast();
     const formRef = ref(null);
     const formData = ref({
@@ -82,13 +83,15 @@ export default {
     });
     const v$ = useVuelidate(rules, formData);
 
-    const handleSubmit = async (e) => {
-      const isValid = await v$.value.$validate();
-      if (!isValid) return;
+    const handleSubmit = (e) => {
+      v$.value.$touch();
 
+      if (v$.value.$invalid) return;
+
+      isSendingEmail.value = true;
       emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.value, USER_ID)
-        .then(() => {
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.value, USER_ID)
+      .then(() => {
           toast.success('Mensaje enviado.');
           console.log('Email enviado');
         })
@@ -98,11 +101,14 @@ export default {
         })
         .finally(() => {
           e.target.reset();
+          isSendingEmail.value = false;
+          v$.value.$reset();
         });
     };
 
     return {
       v$,
+      isSendingEmail,
       formRef,
       formData,
       handleSubmit,
