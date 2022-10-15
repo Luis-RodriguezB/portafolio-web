@@ -9,7 +9,7 @@ export default [
         title: 'Frontend',
         description: 'Más de un año de experiencia y en continuo aprendizaje con las siguientes tecnologías:',
         icon: 'fa-solid fa-laptop',
-        skills: ['HTML/CSS', 'Javascript', 'Typescript',  'Vuejs', 'Reactjs', 'Boostrap', 'SASS']
+        skills: ['HTML/CSS', 'Javascript', 'Typescript', 'Vuejs', 'Reactjs', 'Boostrap', 'SASS']
     },
     {
         title: 'Otras habilidades',

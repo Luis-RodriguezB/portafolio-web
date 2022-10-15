@@ -21,7 +21,7 @@ const validations = {
   },
   email: {
     required: helpers.withMessage('El correo es requerido', required),
-    email: helpers.withMessage('Debe ser un correo valido', email),
+    email: helpers.withMessage('Debe ser un correo válido', email),
     minLength: helpers.withMessage(
       'Deben ser mínimo 5 caracteres',
       minLength(5)

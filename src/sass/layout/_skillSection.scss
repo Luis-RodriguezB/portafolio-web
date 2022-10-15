@@ -34,7 +34,6 @@
     @include respond-to-min-height(930px) {
         min-height: min-content;
         height: 100%;
-        ;
         max-height: toRem(930px);
     }
 }

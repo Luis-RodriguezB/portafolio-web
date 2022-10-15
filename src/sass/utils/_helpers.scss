@@ -16,6 +16,7 @@
   @include respond-to-max-height(740px) {
     min-height: toRem(740px);
   }
+  
   @include respond-to-min-height(930px) {
     min-height: min-content;
     height: 100%;;
@@ -74,4 +75,11 @@
   -webkit-columns: 2;
   -moz-columns: 2;
   columns: 2;
+}
+.toast__custom {
+  border-radius: toRem(5px);
+  margin-left: toRem(10px);
+  max-width: toRem(350px);
+  min-width: toRem(250px);
+  width: 100%;
 }

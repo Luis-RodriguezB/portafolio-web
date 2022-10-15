@@ -35,11 +35,9 @@
             margin-left: toRem(30px);
             margin-right: toRem(30px);
         }
-
         .swiper-button-prev {
             left: 0;
         }
-
         .swiper-button-next {
             right: 0;
         }
@@ -49,7 +47,6 @@
         .swiper-button-prev {
             left: toRem(-45px);
         }
-
         .swiper-button-next {
             right: toRem(-45px);
         }
@@ -59,7 +56,6 @@
         .swiper-button-prev {
             display: none;
         }
-
         .swiper-button-next {
             display: none;
         }

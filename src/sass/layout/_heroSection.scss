@@ -27,7 +27,6 @@
         .hero__title {
             margin-bottom: toRem(6px);
         }
-
         .hero__image-continer {
             max-width: 350px;
         }
@@ -36,7 +35,7 @@
     @include respond-to('medium') {
         max-width: 70%;
     }
-
+    
     @include respond-to('large') {
         max-width: 60%;
     }
