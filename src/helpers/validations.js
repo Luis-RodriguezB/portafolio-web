@@ -7,39 +7,39 @@ import {
 } from '@vuelidate/validators';
 
 const validations = {
-  name: {
-    required: helpers.withMessage('El nombre es requerido', required),
+  fullName: {
+    required: helpers.withMessage('The field is required', required),
     minLength: helpers.withMessage(
-      'Deben ser mínimo 5 caracteres',
+      'Must be at least 5 characters',
       minLength(5)
     ),
     maxLength: helpers.withMessage(
-      'Deben ser máximo 50 caracteres',
+      'Must be a maximum of 50 characters',
       maxLength(50)
     ),
     $autoDirty: true,
   },
   email: {
-    required: helpers.withMessage('El correo es requerido', required),
-    email: helpers.withMessage('Debe ser un correo válido', email),
+    required: helpers.withMessage('The field is required', required),
+    email: helpers.withMessage('Must be a valid email', email),
     minLength: helpers.withMessage(
-      'Deben ser mínimo 5 caracteres',
+      'Must be at least 5 characters',
       minLength(5)
     ),
     maxLength: helpers.withMessage(
-      'Deben ser máximo 80 caracteres',
+      'Must be a maximum of 80 characters',
       maxLength(80)
     ),
     $autoDirty: true,
   },
   description: {
-    required: helpers.withMessage('La descripción es requerida', required),
+    required: helpers.withMessage('The field is required', required),
     minLength: helpers.withMessage(
-      'Deben ser mínimo 30 caracteres',
+      'Must be at least 30 characters',
       minLength(30)
     ),
     maxLength: helpers.withMessage(
-      'Deben ser máximo 200 caracteres',
+      'Must be a maximum of 200 characters',
       maxLength(200)
     ),
     $autoDirty: true,

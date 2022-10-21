@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { MotionPlugin } from '@vueuse/motion';
 import Toast from 'vue-toastification';
 
 import router from './router';
@@ -32,8 +33,10 @@ const options = {
 
 library.add(...icons);
 
-createApp(App)
+const app = createApp(App)
     .use(router)
     .use(Toast, options)
-    .component('font-awesome-icon', FontAwesomeIcon)
-    .mount('#app');
+    .use(MotionPlugin);
+
+app.component('font-awesome-icon', FontAwesomeIcon);
+app.mount('#app');

@@ -1,6 +1,6 @@
 <template>
   <SectionContainer
-    title="Mis habilidades"
+    :title="title"
     titleType="Heading_2"
     sectionClass="skill-section container"
     containerClass="d-flex flex-column w-100 h-100"
@@ -9,7 +9,7 @@
     <div class="skills-container d-flex justify-center align-center">
       <div class="skill-list">
         <Skill
-          v-for="{ title, skills, description, icon } in getSkills"
+          v-for="{ title, skills, description, icon } in skills"
           :key="title"
           :title="title"
           :description="description"
@@ -32,8 +32,10 @@ export default {
     Skill,
   },
   setup() {
+    const { title, skills  } = getSkills;
     return {
-      getSkills,
+      title,
+      skills
     };
   },
 };

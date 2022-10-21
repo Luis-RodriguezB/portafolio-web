@@ -18,7 +18,7 @@
     </div>
     <div class="footer__lower d-flex justify-center align-center">
       <p class="footer__lower-text">
-        &copy; {{ new Date().getFullYear() }}. Creado por Luis Rodríguez
+        &copy; {{ new Date().getFullYear() }}. Made by Luis Rodríguez
         Baltodano
       </p>
     </div>
