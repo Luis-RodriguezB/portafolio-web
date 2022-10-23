@@ -18,6 +18,7 @@
         text="View project"
         typeButton="link"
         :href="href"
+        target="_blank"
       />
     </div>
   </div>
