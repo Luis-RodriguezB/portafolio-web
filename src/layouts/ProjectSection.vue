@@ -1,7 +1,7 @@
 <template>
   <SectionContainer
-    title="Mis proyectos"
-    description="Proyectos personales en los cuales he podido desarrollar mis habilidades"
+    :title="title"
+    :description="description"
     titleType="Heading_2"
     sectionClass="container project-section border-bottom"
     titleClass="text-center underline"
@@ -13,13 +13,13 @@
       slideContentClass="slide-content"
       :swiperOptions="swiperOptions"
     >
-      <swiper-slide v-for="n in 9" :key="n">
+      <swiper-slide v-for="n in 6" :key="n">
         <Card
-          srcImage="/images/coding-guy.png"
-          altImage="Coding guy"
-          title="Proyect test"
-          tools="Javascript, HTML y CSS"
-          href="#"
+          :srcImage="projects[0].image.src"
+          :altImage="projects[0].image.alt"
+          :title="projects[0].title"
+          :tools="getListFormat(projects[0].tools)"
+          :href="projects[0].url"
         />
       </swiper-slide>
     </Slider>
@@ -32,6 +32,8 @@ import { SwiperSlide } from 'swiper/vue';
 import SectionContainer from '../components/SectionContainer.vue';
 import Slider from '../components/Slider.vue';
 import Card from '../components/Card.vue';
+import getProjects from '../data/getProjects';
+import getListFormat from '../helpers/getListFormat';
 
 export default {
   components: {
@@ -41,6 +43,7 @@ export default {
     Card,
   },
   setup() {
+    const { title, description, projects } = getProjects;
     const swiperOptions = {
       slidesPerView: 1,
       spaceBetween: 25,
@@ -67,7 +70,11 @@ export default {
     };
 
     return {
+      title,
+      description,
+      projects,
       swiperOptions,
+      getListFormat
     };
   },
 };

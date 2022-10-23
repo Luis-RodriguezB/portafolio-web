@@ -1,5 +1,5 @@
 <template>
-  <main class="h-100">
+  <main>
     <HeroSection />
     <SkillSection />
     <ProjectSection />

@@ -1,22 +1,18 @@
 <template>
   <SectionContainer
-    title="Luis Rodríguez Baltodano"
-    description="Software Developer"
+    :title="title"
+    :description="subTitle"
     titleType="Heading_1"
     titleClass="hero__title"
     sectionClass="inset_box-shadow container"
     containerClass="hero__content text-center"
     descriptionClass="hero__subtitle not-selected"
   >
-    <p class="hero__description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corporis
-      minima quibusdam incidunt nihil natus reiciendis et laborum illo repellat
-      ut sequi explicabo, provident esse atque quam dolorem aliquid expedita?
-    </p>
+    <p class="hero__description">{{ description }}</p>
     <Image
       classContainer="hero__image-continer"
-      src="/images/coding.svg"
-      alt="Coding guy"
+      :src="image.src"
+      :alt="image.alt"
       draggable="false"
     />
   </SectionContainer>
@@ -25,11 +21,22 @@
 <script>
 import SectionContainer from '../components/SectionContainer.vue';
 import Image from '../components/Image.vue';
+import getHeroInfo from '../data/getHeroInfo';
 
 export default {
   components: {
     Image,
     SectionContainer,
   },
+  setup() {
+    const { title, subTitle, description, image } = getHeroInfo;
+
+    return {
+      title,
+      subTitle,
+      description,
+      image
+    }
+  }
 };
 </script>

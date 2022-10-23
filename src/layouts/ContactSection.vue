@@ -1,7 +1,7 @@
 <template>
   <SectionContainer
-    title="Contáctame"
-    description="Ponte en contacto conmigo y te escribiré pronto"
+    :title="title"
+    :description="description"
     titleType="Heading_2"
     sectionClass="container border-bottom"
     containerClass="contact__container"
@@ -10,31 +10,17 @@
   >
     <form @submit.prevent="handleSubmit" ref="formRef" autocomplete="off">
       <InputField
-        typeField="text"
-        id="name"
-        placeholder="Escribe tu nombre"
-        label="Nombre"
-        v-model.trim="v$.name.$model"
-        :errors="v$.name.$errors"
-      />
-      <InputField
-        typeField="text"
-        id="email"
-        placeholder="Escribe tu correo"
-        label="Email"
-        v-model.trim="v$.email.$model"
-        :errors="v$.email.$errors"
-      />
-      <InputField
-        typeField="textarea"
-        id="description"
-        placeholder="Escribe tu mensaje"
-        label="Descripción"
-        v-model.trim="v$.description.$model"
-        :errors="v$.description.$errors"
+        v-for="{ id, label, placeholder, typeField } in formConfig"
+        :key="id"
+        :id="id"
+        :typeField="typeField"
+        :placeholder="placeholder"
+        :label="label"
+        v-model.trim="v$[id].$model"
+        :errors="v$[id].$errors"
       />
       <CustomButton
-        text="Enviar"
+        text="Send"
         type="submit"
         class="btn btn-primary"
         :disabled="v$.$invalid || !v$.$dirty || isSendingEmail"
@@ -53,6 +39,7 @@ import SectionContainer from '../components/SectionContainer.vue';
 import InputField from '../components/InputField.vue';
 import CustomButton from '../components/CustomButton.vue';
 import validations from '../helpers/validations';
+import getContact from '../data/getContact';
 
 const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
@@ -65,18 +52,19 @@ export default {
     CustomButton,
   },
   setup() {
+    const { title, description, formConfig } = getContact;
     const isSendingEmail = ref(false);
     const toast = useToast();
     const formRef = ref(null);
     const formData = ref({
-      name: '',
+      fullName: '',
       email: '',
       description: '',
     });
 
     const rules = computed(() => {
       return {
-        name: validations.name,
+        fullName: validations.fullName,
         email: validations.email,
         description: validations.description,
       };
@@ -107,6 +95,9 @@ export default {
     };
 
     return {
+      title,
+      description,
+      formConfig,
       v$,
       isSendingEmail,
       formRef,
