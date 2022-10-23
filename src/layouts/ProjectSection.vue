@@ -13,13 +13,13 @@
       slideContentClass="slide-content"
       :swiperOptions="swiperOptions"
     >
-      <swiper-slide v-for="n in 6" :key="n">
+      <swiper-slide v-for="project in projects" :key="project.title">
         <Card
-          :srcImage="projects[0].image.src"
-          :altImage="projects[0].image.alt"
-          :title="projects[0].title"
-          :tools="getListFormat(projects[0].tools)"
-          :href="projects[0].url"
+          :srcImage="project.image.src"
+          :altImage="project.image.alt"
+          :title="project.title"
+          :tools="getListFormat(project.tools)"
+          :href="project.url"
         />
       </swiper-slide>
     </Slider>

@@ -3,10 +3,9 @@
     <div :class="containerClass">
       <h1 v-if="titleType === 'Heading_1'" :class="titleClass">{{ title }}</h1>
       <h2 v-else :class="titleClass">{{ title }}</h2>
-      <span v-if="description" :class="descriptionClass">{{
-        description
-      }}</span>
-
+      <span v-if="description" :class="descriptionClass">
+        {{ description }}
+      </span>
       <slot></slot>
     </div>
   </section>

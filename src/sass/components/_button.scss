@@ -1,12 +1,12 @@
 .btn {
-    background-color: lightgray;
+    background-color: $color__lightgray;
     border-radius: toRem(8px);
     font-size: toRem(18px);
     font-weight: 700;
     letter-spacing: 1.5px;
     padding: toRem(14px) toRem(20px);
-    width: 100%;
     transition: 400ms all ease;
+    width: 100%;
 }
 
 .btn-primary {

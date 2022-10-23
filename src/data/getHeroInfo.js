@@ -1,9 +1,9 @@
 export default {
     title: 'Luis Rodríguez Baltodano',
     subTitle: 'Software Developer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corporis minima quibusdam incidunt nihil natus reiciendis et laborum illo repellat ut sequi explicabo, provident esse atque quam dolorem aliquid expedita?',
+    description: "I'm a software developer focused on web development, I like to learn new ways to create simple and clean code.",
     image: {
         src: '/images/coding.svg',
-        alt: 'Coding guy'
-    }
+        alt: 'Coding guy',
+    },
 }

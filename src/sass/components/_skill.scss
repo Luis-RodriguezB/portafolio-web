@@ -1,8 +1,8 @@
 .skills {
+    border-bottom: 2px solid rgb(211, 211, 211, 0.2);
     min-width: toRem(320px);
     padding: toRem(10px) toRem(20px);
     width: calc(50% - 30px);
-    border-bottom: 2px solid rgb(211, 211, 211, 0.2);
 
     &:last-of-type {
         border-bottom: none;
@@ -39,8 +39,8 @@
     }
 
     @include respond-to-min-width(680px) {
-        margin-bottom: toRem(25px);
         border-bottom: none;
+        margin-bottom: toRem(25px);
 
         .skills__desciption {
             margin-bottom: toRem(25px);

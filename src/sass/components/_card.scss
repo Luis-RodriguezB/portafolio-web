@@ -1,9 +1,9 @@
 .card {
-    width: toRem(320px);
-    border-radius: toRem(25px);
     background-color: $color__white;
+    border-radius: toRem(25px);
+    box-shadow: $card_shadow;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: toRem(320px);
 
     .card__image-content,
     .card__content {
@@ -11,45 +11,45 @@
     }
 
     .card__image-content {
+        padding: toRem(25px) 0;
         position: relative;
         row-gap: toRem(5px);
-        padding: toRem(25px) 0;
 
         .overlay {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
             background-color: $color__primary;
             border-radius: toRem(25px) toRem(25px) 0 toRem(25px);
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
 
             &::after, &::before {
+                background-color: $color__primary;
+                bottom: toRem(-40px);
                 content: '';
+                height: toRem(40px);
                 position: absolute;
                 right: 0;
-                bottom: toRem(-40px);
-                height: toRem(40px);
                 width: toRem(40px);
-                background-color: $color__primary;
             }
             &::after {
-                width: toRem(42px);
-                border-radius: 0 toRem(25px) 0 0;
                 background-color: $color__white;
+                border-radius: 0 toRem(25px) 0 0;
+                width: toRem(42px);
             }
         }
 
         .card__image {
             background-color: $color__white;
+            border-radius: toRem(10px);
             padding: toRem(3px);
             position: relative;
-            border-radius: toRem(10px);
             width: 80%;
 
             .card__img {
-                border: 3px solid $color__primary;
                 border-radius: toRem(10px);
+                border: 3px solid $color__primary;
             }
         }
 
@@ -58,17 +58,18 @@
     .card__content {
         
         .card__title {
+            font-size: toRem(20px);
             margin-top: toRem(5px);
         }
         .card__description {
+            color: $color__black;
             font-size: toRem(18px);
             margin: toRem(10px) 0;
-            color: $color__black;
         }
         .btn-card {
             color: $color__primary;
-            text-decoration: underline;
             margin: 0 toRem(5px) toRem(5px) auto;
+            text-decoration: underline;
             
             &:hover {
                 color: darken($color__primary, $amount: 5);

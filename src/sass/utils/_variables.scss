@@ -15,6 +15,7 @@ $color__primary: #746dfa;
 $color__white: white;
 $color__black: #333;
 $color__danger: #ff1414;
+$color__lightgray: lightgray;
 
 $background__color: #EFEFEF;
 $background__color--dark: #222;
@@ -23,6 +24,8 @@ $font__primary: Roboto, sans-serif;
 $font__secondary: 'Open Sans', sans-serif;
 
 $inset__box-shadow: inset 0px 0px 25px 0.5px rgba(0, 0, 0, 0.2);
+
+$card_shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 $text-shadow_title: 0px 4px 5px rgba(0, 0, 0, 0.25);
 $text-shadow__subtitle: -3px 0px 2px rgba(116,109,250,0.2);

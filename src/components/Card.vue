@@ -15,7 +15,7 @@
       <p class="card__description"><strong>Tools:</strong> {{ tools }}</p>
       <CustomButton
         class="btn-card"
-        text="Ver más"
+        text="View project"
         typeButton="link"
         :href="href"
       />

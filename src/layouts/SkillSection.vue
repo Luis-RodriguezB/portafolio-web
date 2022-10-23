@@ -2,7 +2,7 @@
   <SectionContainer
     :title="title"
     titleType="Heading_2"
-    sectionClass="skill-section container"
+    sectionClass="container skill-section"
     containerClass="d-flex flex-column w-100 h-100"
     titleClass="text-center underline d-flex flex-column"
   >

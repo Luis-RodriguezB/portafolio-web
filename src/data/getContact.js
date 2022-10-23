@@ -1,6 +1,6 @@
 export default {
     title: 'Contact',
-    description: 'Type me and I will write to you soon',
+    description: "Type me and I'll contact you soon",
     formConfig: [
         {
             id: 'fullName',
@@ -18,7 +18,7 @@ export default {
             id: 'description',
             typeField: 'textarea',
             label: 'Description',
-            placeholder: 'Write your description'
+            placeholder: 'Your message'
         },
-    ]
+    ],
 }
