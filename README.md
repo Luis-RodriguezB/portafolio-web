@@ -9,3 +9,4 @@ Este proyecto fue creado y diseñado por Luis Rodríguez Baltodano.
 - Por ultimo, ejecutar el comando npm run dev
 
 #### <a href="https://luis-rodriguezb.netlify.app/#/index" target="_blank">Link</a>
+[Link](https://luis-rodriguezb.netlify.app/#/index){:target="_blank"}
