@@ -1,5 +1,5 @@
 <template>
-  <section :class="sectionClass">
+  <section :class="['hidden', sectionClass]">
     <div :class="containerClass">
       <h1 v-if="titleType === 'Heading_1'" :class="titleClass">{{ title }}</h1>
       <h2 v-else :class="titleClass">{{ title }}</h2>
