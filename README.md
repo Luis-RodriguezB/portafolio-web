@@ -8,4 +8,4 @@ Este proyecto fue creado y diseñado por Luis Rodríguez Baltodano.
 - Ejecutar npm install dentro del proyecto
 - Por ultimo, ejecutar el comando npm run dev
 
-#### %md <a href="https://luis-rodriguezb.netlify.app/#/index" target="_blank">Link</a>
+#### <a href="https://luis-rodriguezb.netlify.app/#/index" target="_blank">Link</a>
