@@ -1,6 +1,6 @@
 const ScrollReveal = {
     mounted(el, binding, vnode, prevVnode) {
-        const observer = new IntersectionObserver((entries, observe) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const isIntersecting = entry.isIntersecting;
                 if (isIntersecting) {
