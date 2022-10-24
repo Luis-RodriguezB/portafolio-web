@@ -6,7 +6,7 @@ export default {
             id: 'fullName',
             typeField: 'text',
             label: 'Name',
-            placeholder: 'Luis Rodriguez'
+            placeholder: 'Luis Rodríguez'
         },
         {
             id: 'email',

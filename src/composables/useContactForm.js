@@ -26,11 +26,11 @@ const useContactForm = (data = {}, validatons = {}) => {
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.value, USER_ID)
       .then(() => {
-        toast.success('Mensaje enviado.');
+        toast.success('Message sent.');
         console.log('Email enviado');
       })
       .catch((error) => {
-        toast.error('Ups!... Algo ha ocurrido.');
+        toast.error('Ups!... Something went wrong.');
         console.log(error);
       })
       .finally(() => {
