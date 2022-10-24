@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Toast from 'vue-toastification';
+import ScrollReveal from './directives/ScrollReveal';
 
 import router from './router';
 import icons from './icons';
@@ -36,5 +37,6 @@ const app = createApp(App)
     .use(router)
     .use(Toast, options);
 
+app.directive('scroll-reveal', ScrollReveal)
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');
