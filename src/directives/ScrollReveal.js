@@ -1,12 +1,10 @@
 const ScrollReveal = {
     mounted(el, binding, vnode, prevVnode) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const isIntersecting = entry.isIntersecting;
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(({ target, isIntersecting }) => {
                 if (isIntersecting) {
-                    entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show');
+                    target.childNodes.forEach(el => el.classList.add('fadeInDown'));
+                    observer.unobserve(target);
                 }
             })
         }, {

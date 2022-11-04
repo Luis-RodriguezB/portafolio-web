@@ -7,6 +7,7 @@
     titleClass="text-center underline"
     descriptionClass="text-center description-text"
     containerClass="project-container d-flex flex-column"
+    v-scroll-reveal
   >
     <Slider
       sliderContainerClass="slider-container"

@@ -16,7 +16,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 1120px;
+            max-width: toRem(1120px);
             width: 100%;
 
             @include respond-to-min-width(680px) {

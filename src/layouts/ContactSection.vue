@@ -7,6 +7,7 @@
     containerClass="contact__container"
     titleClass="text-center underline"
     descriptionClass="description-text text-center"
+    v-scroll-reveal
   >
     <form @submit.prevent="handleSubmit" ref="formRef" autocomplete="off">
       <InputField

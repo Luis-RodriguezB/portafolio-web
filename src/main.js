@@ -37,6 +37,6 @@ const app = createApp(App)
     .use(router)
     .use(Toast, options);
 
-app.directive('scroll-reveal', ScrollReveal)
+app.directive('scroll-reveal', ScrollReveal);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

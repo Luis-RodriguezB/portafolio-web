@@ -39,7 +39,7 @@ export default {
     },
     knowledge: {
       type: Array,
-      default: () => [],
+      default: [],
     },
   },
 };

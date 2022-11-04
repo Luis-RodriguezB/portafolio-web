@@ -7,6 +7,7 @@
     sectionClass="inset_box-shadow container"
     containerClass="hero__content text-center"
     descriptionClass="hero__subtitle not-selected"
+    v-scroll-reveal
   >
     <p class="hero__description">{{ description }}</p>
     <Image

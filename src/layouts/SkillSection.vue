@@ -5,6 +5,7 @@
     sectionClass="container skill-section"
     containerClass="d-flex flex-column w-100 h-100"
     titleClass="text-center underline d-flex flex-column"
+    v-scroll-reveal
   >
     <div class="skills-container d-flex justify-center align-center">
       <div class="skill-list">

@@ -22,7 +22,7 @@
 
 @mixin respond-to-min-width($bp) {
   @media screen and (min-width: $bp) {
-      @content;
+    @content;
   }
 }
 @mixin respond-to-max-width($bp) {
@@ -33,11 +33,11 @@
 
 @mixin respond-to-min-height($bp) {
   @media screen and (min-height: $bp) {
-      @content;
+    @content;
   }
 }
 @mixin respond-to-max-height($bp) {
   @media screen and (max-height: $bp) {
-      @content;
+    @content;
   }
 }

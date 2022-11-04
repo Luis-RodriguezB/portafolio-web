@@ -3,10 +3,10 @@
     padding: toRem(35px) 0;
 
     @include respond-to('medium') {
-        max-width: 550px;
+        max-width: toRem(550px);
     }
 
     @include respond-to('large') {
-        max-width: 650px;
+        max-width: toRem(650px);
     }
 }

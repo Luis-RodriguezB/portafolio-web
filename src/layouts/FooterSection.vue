@@ -1,6 +1,7 @@
 <template>
   <footer
     class="footer-section d-flex flex-column justify-between align-center"
+    v-scroll-reveal
   >
     <div class="footer__top d-flex flex-column align-center">
       <ul class="footer__social-links d-flex">
