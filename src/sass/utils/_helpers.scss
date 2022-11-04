@@ -98,16 +98,6 @@
   width: 100%;
 }
 
-.hidden {
-  opacity: 0;
-  transition: opacity .8s ease-in-out;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-}
-
 .fadeInDown {
   animation: fadeInDown .6s ease-in both;
 }
