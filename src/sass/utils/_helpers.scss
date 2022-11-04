@@ -98,6 +98,10 @@
   width: 100%;
 }
 
+.hide {
+  opacity: 0;
+}
+
 .fadeInDown {
   animation: fadeInDown .6s ease-in both;
 }

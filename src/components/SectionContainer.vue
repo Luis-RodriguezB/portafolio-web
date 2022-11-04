@@ -2,7 +2,7 @@
   <section :class="sectionClass">
     <div :class="containerClass">
       <h1 v-if="titleType === 'Heading_1'" :class="titleClass">{{ title }}</h1>
-      <h2 v-else :class="titleClass">{{ title }}</h2>
+      <h2 v-else-if="titleType === 'Heading_2'" :class="titleClass">{{ title }}</h2>
       <span v-if="description" :class="descriptionClass">
         {{ description }}
       </span>
