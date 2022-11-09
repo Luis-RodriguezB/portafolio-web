@@ -1,5 +1,6 @@
 <template>
   <footer
+    id="footer-section"
     class="footer-section d-flex flex-column justify-between align-center"
     v-scroll-reveal
   >
@@ -19,7 +20,7 @@
     </div>
     <div class="footer__lower d-flex justify-center align-center">
       <p class="footer__lower-text">
-        &copy; {{ new Date().getFullYear() }}. Made by Luis Rodríguez Baltodano
+        &copy; {{ new Date().getFullYear() }}. {{ $t('footerSection.description') }} Luis Rodríguez Baltodano
       </p>
     </div>
   </footer>

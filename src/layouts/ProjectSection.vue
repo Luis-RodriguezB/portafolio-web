@@ -1,7 +1,8 @@
 <template>
   <SectionContainer
-    :title="title"
-    :description="description"
+    id="project-section"
+    :title="$t('projectSection.title')"
+    :description="$t('projectSection.description')"
     titleType="Heading_2"
     sectionClass="container project-section border-bottom"
     titleClass="text-center underline"
@@ -19,7 +20,7 @@
           :srcImage="project.image.src"
           :altImage="project.image.alt"
           :title="project.title"
-          :tools="getListFormat(project.tools)"
+          :tools="getListFormat(project.tools, $i18n.locale)"
           :href="project.url"
         />
       </swiper-slide>
@@ -75,7 +76,7 @@ export default {
       description,
       projects,
       swiperOptions,
-      getListFormat
+      getListFormat,
     };
   },
 };

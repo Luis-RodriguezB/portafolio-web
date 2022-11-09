@@ -1,7 +1,8 @@
 <template>
   <SectionContainer
-    :title="title"
-    :description="subTitle"
+    id="hero-section"
+    :title="$t('heroSection.title')"
+    :description="$t('heroSection.subTitle')"
     titleType="Heading_1"
     titleClass="hero__title"
     sectionClass="inset_box-shadow container"
@@ -9,7 +10,7 @@
     descriptionClass="hero__subtitle not-selected"
     v-scroll-reveal
   >
-    <p class="hero__description">{{ description }}</p>
+    <p class="hero__description">{{ $t('heroSection.description') }}</p>
     <Image
       classContainer="hero__image-continer"
       :src="image.src"
@@ -36,8 +37,8 @@ export default {
       title,
       subTitle,
       description,
-      image
-    }
-  }
+      image,
+    };
+  },
 };
 </script>

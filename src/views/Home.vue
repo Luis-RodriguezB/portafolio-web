@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <main>
     <HeroSection/>
     <SkillSection/>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import Header from '../layouts/Header.vue'
 import HeroSection from '../layouts/HeroSection.vue';
 import SkillSection from '../layouts/SkillSection.vue';
 import ProjectSection from '../layouts/ProjectSection.vue';
@@ -17,6 +19,7 @@ import FooterSection from '../layouts/FooterSection.vue';
 
 export default {
   components: {
+    Header,
     HeroSection,
     SkillSection,
     ProjectSection,

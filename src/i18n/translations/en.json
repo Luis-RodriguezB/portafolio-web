@@ -1,0 +1,24 @@
+{
+    "heroSection": {
+        "title": "Luis Rodríguez Baltodano",
+        "subTitle": "Software Developer",
+        "description": "I'm a software developer focused on web development, I like to learn new ways to create simple and clean code."
+    },
+    "skillSection": {
+        "title": "Skills"
+    },
+    "projectSection": {
+        "title": "Projects",
+        "description": "Personal projects in which I have been able to develop my skills",
+        "cardTools": "Tools",
+        "ctaText": "View project"
+    },
+    "contactSection": {
+        "title": "Contact",
+        "description": "Type me and I'll contact you soon",
+        "btnText": "Send"
+    },
+    "footerSection": {
+        "description": "Made by"
+    }
+}

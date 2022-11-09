@@ -1,8 +1,10 @@
 import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import i18n from './i18n';
 import Toast from 'vue-toastification';
 import ScrollReveal from './directives/ScrollReveal';
+import vClickOutside from './directives/vClickOutside';
 
 import router from './router';
 import icons from './icons';
@@ -35,8 +37,10 @@ library.add(...icons);
 
 const app = createApp(App)
     .use(router)
+    .use(i18n)
     .use(Toast, options);
 
+app.directive('click-outside', vClickOutside);
 app.directive('scroll-reveal', ScrollReveal);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

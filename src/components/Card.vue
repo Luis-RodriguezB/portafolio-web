@@ -12,10 +12,10 @@
 
     <div class="card__content d-flex flex-column">
       <h3 class="card__title">{{ title }}</h3>
-      <p class="card__description"><strong>Tools:</strong> {{ tools }}</p>
+      <p class="card__description"><strong>{{ $t('projectSection.cardTools') }}:</strong> {{ tools }}</p>
       <CustomButton
         class="btn-card"
-        text="View project"
+        :text="$t('projectSection.ctaText')"
         typeButton="link"
         :href="href"
         target="_blank"

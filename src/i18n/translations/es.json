@@ -1,0 +1,24 @@
+{
+    "heroSection": {
+        "title": "Luis Rodríguez Baltodano",
+        "subTitle": "Desarrollador de software",
+        "description": "Soy un desarrollador de software enfocado en el desarrollo web, me gusta aprender nuevas formas de crear código limpio y simple."
+    },
+    "skillSection": {
+        "title": "Habilidades"
+    },
+    "projectSection": {
+        "title": "Proyectos",
+        "description": "Proyectos personales en los cuales he desarrollado mis habilidades.",
+        "cardTools": "Herramientas",
+        "ctaText": "Ver proyecto"
+    },
+    "contactSection": {
+        "title": "Contacto",
+        "description": "Escríbeme y te contactaré pronto",
+        "btnText": "Enviar"
+    },
+    "footerSection": {
+        "description": "Hecho por"
+    }
+}

@@ -71,6 +71,9 @@ select:focus {
   border: none;
   outline: none;
 }
+select::-ms-expand {
+  display: none;
+}
 
 textarea {
   resize: vertical;

@@ -1,6 +1,7 @@
 <template>
   <SectionContainer
-    :title="title"
+    id="skill-section"
+    :title="$t('skillSection.title')"
     titleType="Heading_2"
     sectionClass="container skill-section"
     containerClass="d-flex flex-column w-100 h-100"

@@ -1,7 +1,8 @@
 <template>
   <SectionContainer
-    :title="title"
-    :description="description"
+    id="contact-section"
+    :title="$t('contactSection.title')"
+    :description="$t('contactSection.description')"
     titleType="Heading_2"
     sectionClass="container border-bottom"
     containerClass="contact__container"
@@ -11,17 +12,17 @@
   >
     <form @submit.prevent="handleSubmit" ref="formRef" autocomplete="off">
       <InputField
-        v-for="{ id, label, placeholder, typeField } in formConfig"
-        :key="id"
-        :id="id"
-        :typeField="typeField"
-        :placeholder="placeholder"
-        :label="label"
-        v-model.trim="v$[id].$model"
-        :errors="v$[id].$errors"
+        v-for="inputConfig in formConfig"
+        :key="inputConfig.id"
+        :id="inputConfig.id"
+        :typeField="inputConfig.typeField"
+        :placeholder="inputConfig[$i18n.locale].placeholder"
+        :label="inputConfig[$i18n.locale].label"
+        v-model.trim="v$[inputConfig.id].$model"
+        :errors="v$[inputConfig.id].$errors"
       />
       <CustomButton
-        text="Send"
+        :text="$t('contactSection.btnText')"
         type="submit"
         class="btn btn-primary"
         :disabled="v$.$invalid || !v$.$dirty || isSendingEmail"
@@ -56,12 +57,13 @@ export default {
       email: validations.email,
       description: validations.description,
     };
-    const { title, description, formConfig } = getContact;
-    const { v$, isSendingEmail, formRef, handleSubmit } = useContactForm(formData, rules);
+    const { formConfig } = getContact;
+    const { v$, isSendingEmail, formRef, handleSubmit } = useContactForm(
+      formData,
+      rules
+    );
 
     return {
-      title,
-      description,
       formConfig,
 
       v$,

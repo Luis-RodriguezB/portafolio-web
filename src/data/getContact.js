@@ -1,24 +1,40 @@
 export default {
-    title: 'Contact',
-    description: "Type me and I'll contact you soon",
     formConfig: [
         {
             id: 'fullName',
             typeField: 'text',
-            label: 'Name',
-            placeholder: 'Luis Rodríguez'
+            en: {
+                label: 'Name',
+                placeholder: 'Luis Rodríguez'
+            },
+            es: {
+                label: 'Nombre',
+                placeholder: 'Luis Rodríguez'
+            }
         },
         {
             id: 'email',
             typeField: 'text',
-            label: 'Email',
-            placeholder: 'luis@gmail.com'
+            en: {
+                label: 'Email',
+                placeholder: 'luis@gmail.com'
+            },
+            es: {
+                label: 'Correo',
+                placeholder: 'luis@gmail.com'
+            },
         },
         {
             id: 'description',
             typeField: 'textarea',
-            label: 'Description',
-            placeholder: 'Your message'
+            en: {
+                label: 'Description',
+                placeholder: 'Your message',
+            },
+            es: {
+                label: 'Descripción',
+                placeholder: 'Tu mensaje',
+            }
         },
     ],
 }
