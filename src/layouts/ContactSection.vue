@@ -60,8 +60,7 @@ export default {
       },
     };
 
-    const { v$, isSendingEmail, formRef, handleSubmit } =
-      useContactForm(formConfig);
+    const { v$, isSendingEmail, formRef, handleSubmit } = useContactForm(formConfig);
 
     return {
       getContact,

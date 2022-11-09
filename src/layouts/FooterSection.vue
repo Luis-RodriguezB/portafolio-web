@@ -6,7 +6,11 @@
   >
     <div class="footer__top d-flex flex-column align-center">
       <ul class="footer__social-links d-flex">
-        <li class="footer__social-link" v-for="item in data" :key="item.title">
+        <li
+          class="footer__social-link"
+          v-for="item in getPersonalInfo"
+          :key="item.title"
+        >
           <CustomButton
             typeButton="link"
             class="link d-flex justify-center align-center"
@@ -20,7 +24,8 @@
     </div>
     <div class="footer__lower d-flex justify-center align-center">
       <p class="footer__lower-text">
-        &copy; {{ new Date().getFullYear() }}. {{ $t('footerSection.description') }} Luis Rodríguez Baltodano
+        &copy; {{ new Date().getFullYear() }}.
+        {{ $t('footerSection.description') }} Luis Rodríguez Baltodano
       </p>
     </div>
   </footer>
@@ -35,10 +40,8 @@ export default {
     CustomButton,
   },
   setup() {
-    const data = getPersonalInfo;
-
     return {
-      data,
+      getPersonalInfo,
     };
   },
 };
