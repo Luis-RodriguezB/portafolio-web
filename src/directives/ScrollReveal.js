@@ -6,7 +6,7 @@ const ScrollReveal = {
                     target.childNodes.forEach(el => el.classList.add('fadeInDown'));
                     observer.unobserve(target);
                 }
-            })
+            });
         }, {
             threshold: 0.1
         });

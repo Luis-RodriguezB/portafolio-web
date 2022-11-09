@@ -12,7 +12,7 @@
   >
     <form @submit.prevent="handleSubmit" ref="formRef" autocomplete="off">
       <InputField
-        v-for="inputConfig in formConfig"
+        v-for="inputConfig in getContact"
         :key="inputConfig.id"
         :id="inputConfig.id"
         :typeField="inputConfig.typeField"
@@ -37,7 +37,7 @@ import InputField from '../components/InputField.vue';
 import CustomButton from '../components/CustomButton.vue';
 
 import useContactForm from '../composables/useContactForm';
-import validations from '../helpers/validations';
+import validations from '../validations';
 import getContact from '../data/getContact';
 
 export default {
@@ -47,24 +47,24 @@ export default {
     CustomButton,
   },
   setup() {
-    const formData = {
-      fullName: '',
-      email: '',
-      description: '',
+    const formConfig = {
+      formData: {
+        fullName: '',
+        email: '',
+        description: '',
+      },
+      formRules: {
+        fullName: validations.fullName,
+        email: validations.email,
+        description: validations.description,
+      },
     };
-    const rules = {
-      fullName: validations.fullName,
-      email: validations.email,
-      description: validations.description,
-    };
-    const { formConfig } = getContact;
-    const { v$, isSendingEmail, formRef, handleSubmit } = useContactForm(
-      formData,
-      rules
-    );
+
+    const { v$, isSendingEmail, formRef, handleSubmit } =
+      useContactForm(formConfig);
 
     return {
-      formConfig,
+      getContact,
 
       v$,
       formRef,

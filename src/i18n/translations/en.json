@@ -16,9 +16,19 @@
     "contactSection": {
         "title": "Contact",
         "description": "Type me and I'll contact you soon",
-        "btnText": "Send"
+        "btnText": "Send",
+        "toastMessage": {
+            "success": "Your message has been sent",
+            "error": "Ups!... Something went wrong"
+        }
     },
     "footerSection": {
         "description": "Made by"
+    },
+    "validations": {
+        "required": "The field is required",
+        "email": "Must be a valid email",
+        "minLength": "Must be at least {min} characters",
+        "maxLenght": "Must be a maximum of {max} characters"
     }
 }

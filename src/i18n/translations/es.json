@@ -16,9 +16,19 @@
     "contactSection": {
         "title": "Contacto",
         "description": "Escríbeme y te contactaré pronto",
-        "btnText": "Enviar"
+        "btnText": "Enviar",
+        "toastMessage": {
+            "success": "Tu mensaje ha sido enviado",
+            "error": "Ups!... Algo salió mal"
+        }
     },
     "footerSection": {
         "description": "Hecho por"
+    },
+    "validations": {
+        "required": "El campo es requerido",
+        "email": "Debe de ser un correo valido",
+        "minLength": "Debe ser de al menos {min} caracteres",
+        "maxLenght": "Debe ser un máximo de {max} caracteres"
     }
 }

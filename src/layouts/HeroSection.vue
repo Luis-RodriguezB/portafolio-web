@@ -13,8 +13,8 @@
     <p class="hero__description">{{ $t('heroSection.description') }}</p>
     <Image
       classContainer="hero__image-continer"
-      :src="image.src"
-      :alt="image.alt"
+      src="/images/coding.svg"
+      alt="Coding guy"
       draggable="false"
     />
   </SectionContainer>
@@ -23,22 +23,11 @@
 <script>
 import SectionContainer from '../components/SectionContainer.vue';
 import Image from '../components/Image.vue';
-import getHeroInfo from '../data/getHeroInfo';
 
 export default {
   components: {
     Image,
     SectionContainer,
-  },
-  setup() {
-    const { title, subTitle, description, image } = getHeroInfo;
-
-    return {
-      title,
-      subTitle,
-      description,
-      image,
-    };
   },
 };
 </script>

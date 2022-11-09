@@ -15,7 +15,7 @@
       slideContentClass="slide-content"
       :swiperOptions="swiperOptions"
     >
-      <swiper-slide v-for="project in projects" :key="project.title">
+      <swiper-slide v-for="project in getProjects" :key="project.title">
         <Card
           :srcImage="project.image.src"
           :altImage="project.image.alt"
@@ -45,7 +45,6 @@ export default {
     Card,
   },
   setup() {
-    const { title, description, projects } = getProjects;
     const swiperOptions = {
       slidesPerView: 1,
       spaceBetween: 25,
@@ -72,9 +71,7 @@ export default {
     };
 
     return {
-      title,
-      description,
-      projects,
+      getProjects,
       swiperOptions,
       getListFormat,
     };

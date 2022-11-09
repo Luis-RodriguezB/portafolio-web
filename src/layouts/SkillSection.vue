@@ -11,12 +11,12 @@
     <div class="skills-container d-flex justify-center align-center">
       <div class="skill-list">
         <Skill
-          v-for="{ title, skills, description, icon } in skills"
-          :key="title"
-          :title="title"
-          :description="description"
-          :knowledge="skills"
-          :icon="icon"
+          v-for="item in getSkills"
+          :key="item.en.title"
+          :title="item[ $i18n.locale ].title"
+          :description="item[ $i18n.locale ].description"
+          :knowledge="item.skills ? item.skills : item[ $i18n.locale ].skills "
+          :icon="item.icon"
         />
       </div>
     </div>
@@ -34,10 +34,8 @@ export default {
     Skill,
   },
   setup() {
-    const { title, skills  } = getSkills;
     return {
-      title,
-      skills
+      getSkills
     };
   },
 };
