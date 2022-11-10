@@ -9,6 +9,7 @@
       @click.capture="closeElement"
       ref="refElement"
       class="options-list hidden"
+      @change="handleChange"
     >
       <InputField
         v-for="lang in languages"
@@ -38,44 +39,39 @@ export default {
   },
   setup() {
     const { refElement, openElement, closeElement } = useToggleElement();
-    const radioData = ref('');
     const { locale } = useI18n();
     const languages = [
       {
         en: {
-          name: 'Spanish'
+          name: 'Spanish',
         },
         es: {
-          name: 'Español'
+          name: 'Español',
         },
         cod: 'es',
       },
       {
         en: {
-          name: 'English'
+          name: 'English',
         },
         es: {
-          name: 'Ingles'
+          name: 'Ingles',
         },
         cod: 'en',
       },
     ];
 
-    const getLangSelected = computed(() => {
-      const langSelected = languages.find(lang => lang.cod === locale.value);
-      return langSelected[locale.value].name;
-    })
-
     return {
-      radioData,
       languages,
       locale,
-
       refElement,
+
       openElement,
       closeElement,
-
-      getLangSelected
+      handleChange: () => localStorage.setItem('lang', locale.value),
+      getLangSelected: computed(
+        () => languages.find((lang) => lang.cod === locale.value)[locale.value].name
+      ),
     };
   },
 };

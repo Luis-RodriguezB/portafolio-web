@@ -13,7 +13,6 @@ const useToggleElement = () => {
       refElement.value.classList.remove('visible');
     }
   };
-
   const toggleElement = () => {
     refElement.value.classList.toggle('visible');
   };

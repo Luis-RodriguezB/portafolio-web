@@ -1,4 +1,3 @@
-
 const vClickOutside = {
   mounted(el, binding) {
     el.clickOutsideEvent = function ({ target }) {
@@ -6,11 +5,11 @@ const vClickOutside = {
         binding.value(target, el);
       }
     };
-    document.body.addEventListener("click", el.clickOutsideEvent);
+    document.body.addEventListener('click', el.clickOutsideEvent);
   },
   unmounted(el) {
-    document.body.removeEventListener("click", el.clickOutsideEvent);
+    document.body.removeEventListener('click', el.clickOutsideEvent);
   },
-}
+};
 
 export default vClickOutside;

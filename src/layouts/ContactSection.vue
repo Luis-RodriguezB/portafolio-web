@@ -59,7 +59,6 @@ export default {
         description: validations.description,
       },
     };
-
     const { v$, isSendingEmail, formRef, handleSubmit } = useContactForm(formConfig);
 
     return {
