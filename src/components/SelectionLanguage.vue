@@ -55,7 +55,7 @@ export default {
           name: 'English',
         },
         es: {
-          name: 'Ingles',
+          name: 'Inglés',
         },
         cod: 'en',
       },
