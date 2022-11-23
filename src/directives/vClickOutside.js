@@ -6,6 +6,10 @@ const vClickOutside = {
       }
     };
     document.body.addEventListener('click', el.clickOutsideEvent);
+
+    window.onscroll = function() {
+      binding.value(el);
+    }
   },
   unmounted(el) {
     document.body.removeEventListener('click', el.clickOutsideEvent);
