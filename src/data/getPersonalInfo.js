@@ -16,7 +16,7 @@ export default [
   },
   {
     title: 'CV',
-    url: '/files/RESUME_TEST.pdf',
+    url: '/files/Resume.pdf',
     icon: 'fa-regular fa-address-book',
   },
 ];
