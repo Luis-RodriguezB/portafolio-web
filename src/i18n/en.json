@@ -3,7 +3,8 @@
     "home": "Home",
     "experience": "Experience",
     "contact": "Contact",
-    "menu-btn": "Menu"
+    "menu-btn": "Menu",
+    "theme-toggle": "Toggle theme"
   },
   "welcome": {
     "title": "Hi, I'm Luis Rodríguez!",

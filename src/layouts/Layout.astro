@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang={Astro.currentLocale ?? "en"}>
   <head>
+    <!-- Anti-flash: set theme before first paint -->
+    <script is:inline>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const isDark = saved === "dark" || (!saved && prefersDark);
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />

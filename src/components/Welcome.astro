@@ -36,14 +36,14 @@ const t = getTranslations(Astro.url);
     </h1>
     <p class="text-2xl text-center font-semibold mb-5">{t.welcome.subtitle}</p>
 
-    <p class="text-center text-gray-400">
+    <p class="text-center text-gray-500 dark:text-gray-400">
       {t.welcome.description}
     </p>
 
     <div class="flex justify-center my-8">
       <a
         href="#contact"
-        class="px-6 p-3 bg-white text-black rounded-4xl hover:bg-gray-200 transition-colors font-bold"
+        class="px-6 p-3 bg-gray-900 text-white rounded-4xl hover:bg-gray-700 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-colors font-bold"
         >{t.welcome.contact}</a
       >
     </div>

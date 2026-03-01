@@ -3,7 +3,8 @@
     "home": "Inicio",
     "experience": "Experiencia",
     "contact": "Contacto",
-    "menu-btn": "Menú"
+    "menu-btn": "Menú",
+    "theme-toggle": "Cambiar tema"
   },
   "welcome": {
     "title": "¡Hola, soy Luis Rodríguez!",
