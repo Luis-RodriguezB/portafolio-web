@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Welcome from "../../components/Welcome.astro";
+import Skills from "../../components/Skills.astro";
 import Experience from "../../components/Experience.astro";
 import Contact from "../../components/Contact.astro";
 
@@ -10,8 +11,9 @@ import "../../styles/global.css";
 
 <Layout>
   <Header />
-  <main class="container max-w-[800px] px-5 md:px-0 mx-auto">
+  <main id="main-content" class="max-w-5xl px-5 md:px-8 mx-auto">
     <Welcome />
+    <Skills />
     <Experience />
     <Contact />
   </main>

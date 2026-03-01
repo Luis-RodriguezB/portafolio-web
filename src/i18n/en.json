@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "experience": "Experience",
+    "skills": "Skills",
     "contact": "Contact",
     "menu-btn": "Menu",
     "theme-toggle": "Toggle theme"
@@ -9,10 +10,18 @@
   "welcome": {
     "title": "Hi, I'm Luis Rodríguez!",
     "subtitle": "Frontend Developer",
-    "description": "I’m a Frontend Developer with 4 years of experience building modern, scalable, and user-focused web applications. I specialize in React, with a strong focus on performance, clean architecture, and intuitive user experiences.",
+    "description": "I'm a Frontend Developer with 4 years of experience building modern, scalable, and user-focused web applications. I specialize in React, with a strong focus on performance, clean architecture, and intuitive user experiences.",
     "contact": "Contact Me",
+    "viewWork": "View Experience",
+    "available": "Available for freelance",
     "experienceWith": "Experience With",
     "scrollToExperience": "Scroll to experience"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "tools": "Tools & Workflow",
+    "backend": "Backend"
   },
   "experience": {
     "title": "Experience",
@@ -21,13 +30,32 @@
         "company": "Novacomp",
         "role": "Software Engineer",
         "date": "Dec 2024 – Present",
-        "description": "Frontend engineer focused on building scalable architectures and high-performance React applications. I design reusable components, enforce coding standards, and translate Figma designs into responsive and accessible interfaces. I collaborate closely with cross-functional teams to deliver clean, maintainable, and optimized solutions."
+        "description": "Frontend engineer focused on building scalable architectures and high-performance React applications. I design reusable components, enforce coding standards, and translate Figma designs into responsive and accessible interfaces. I collaborate closely with cross-functional teams to deliver clean, maintainable, and optimized solutions.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Tanstack Query",
+          "Redux",
+          "Figma",
+          "SASS",
+          ".Net",
+          "Git"
+        ]
       },
       {
         "company": "Accenture",
         "role": "Frontend Developer",
         "date": "Aug 2021 – Mar 2025",
-        "description": "Frontend developer working on enterprise web applications using React and Vue. I built reusable components, maintained and refactored codebases, and collaborated directly with clients and agile teams to deliver high-quality solutions on time."
+        "description": "Frontend developer working on enterprise web applications using React and Vue. I built reusable components, maintained and refactored codebases, and collaborated directly with clients and agile teams to deliver high-quality solutions on time.",
+        "tags": [
+          "React",
+          "Vue.js",
+          "JavaScript",
+          "SASS",
+          "Jira",
+          "Photoshop",
+          "Git"
+        ]
       }
     ]
   },

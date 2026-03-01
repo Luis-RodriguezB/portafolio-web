@@ -1,0 +1,98 @@
+---
+import { getTranslations } from "../utils/i18n";
+
+const t = getTranslations(Astro.url);
+
+const frontendSkills = [
+  { name: "React", accent: true },
+  { name: "Vuejs", accent: false },
+  { name: "TypeScript", accent: true },
+  { name: "Tanstack Query", accent: true },
+  { name: "HTML5", accent: false },
+  { name: "CSS3", accent: false },
+  { name: "Tailwind CSS", accent: false },
+  { name: "SASS", accent: false },
+  { name: "Bootstrap", accent: false },
+];
+
+const backendSkills = [
+  { name: "C#", accent: true },
+  { name: ".Net", accent: true },
+];
+
+const toolSkills = [
+  { name: "Git", accent: false },
+  { name: "Postman", accent: true },
+  { name: "Figma", accent: false },
+  { name: "REST APIs", accent: false },
+  { name: "Agile / Scrum", accent: true },
+  { name: "Jira", accent: false },
+];
+---
+
+<section id="skills">
+  <div class="py-24 w-full">
+    <h2 class="text-3xl font-bold mb-10 text-gray-900 dark:text-white">
+      {t.skills.title}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Frontend -->
+      <div class="card p-6">
+        <h3
+          class="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
+          style="color: var(--accent)"
+        >
+          {t.skills.frontend}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {
+            frontendSkills.map((skill) => (
+              <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
+                {skill.name}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Tools & Workflow -->
+      <div class="card p-6">
+        <h3
+          class="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
+          style="color: var(--accent)"
+        >
+          {t.skills.tools}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {
+            toolSkills.map((skill) => (
+              <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
+                {skill.name}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="card p-6">
+        <h3
+          class="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
+          style="color: var(--accent)"
+        >
+          {t.skills.backend}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {
+            backendSkills.map((skill) => (
+              <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
+                {skill.name}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -15,16 +15,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Luis Rodríguez — Frontend Developer with 4 years of experience building modern, scalable web applications with React, TypeScript, and more."
+    />
     <title>Portafolio - Luis Rodríguez</title>
+
+    <!-- JetBrains Mono font preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSiter" />
+    <meta name="apple-mobile-web-app-title" content="Luis Rodríguez" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <slot />
   </body>
 </html>
@@ -41,7 +50,7 @@
       });
     },
     {
-      threshold: 0.3,
+      threshold: 0.15,
     },
   );
 
