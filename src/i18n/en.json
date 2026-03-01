@@ -1,0 +1,37 @@
+{
+  "header": {
+    "home": "Home",
+    "experience": "Experience",
+    "contact": "Contact",
+    "menu-btn": "Menu"
+  },
+  "welcome": {
+    "title": "Hi, I'm Luis Rodríguez!",
+    "subtitle": "Frontend Developer",
+    "description": "I’m a Frontend Developer with 4 years of experience building modern, scalable, and user-focused web applications. I specialize in React, with a strong focus on performance, clean architecture, and intuitive user experiences.",
+    "contact": "Contact Me",
+    "experienceWith": "Experience With",
+    "scrollToExperience": "Scroll to experience"
+  },
+  "experience": {
+    "title": "Experience",
+    "experiences": [
+      {
+        "company": "Novacomp",
+        "role": "Software Engineer",
+        "date": "Dec 2024 – Present",
+        "description": "Frontend engineer focused on building scalable architectures and high-performance React applications. I design reusable components, enforce coding standards, and translate Figma designs into responsive and accessible interfaces. I collaborate closely with cross-functional teams to deliver clean, maintainable, and optimized solutions."
+      },
+      {
+        "company": "Accenture",
+        "role": "Frontend Developer",
+        "date": "Aug 2021 – Mar 2025",
+        "description": "Frontend developer working on enterprise web applications using React and Vue. I built reusable components, maintained and refactored codebases, and collaborated directly with clients and agile teams to deliver high-quality solutions on time."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Feel free to reach out if you'd like to collaborate, discuss a project, or just say hello. I'm always open to new opportunities, freelance projects, and technical collaborations."
+  }
+}

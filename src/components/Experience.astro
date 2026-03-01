@@ -1,0 +1,41 @@
+---
+import { getTranslations } from "../utils/i18n";
+
+const lang = Astro.url.pathname.startsWith("/es") ? "es" : "en";
+const t = getTranslations(Astro.url);
+const experiences = t.experience.experiences;
+---
+
+<section id="experience">
+  <div class="py-28">
+    <h2 class="text-4xl font-bold mb-8">{t.experience.title}</h2>
+
+    <div class="max-w-6xl mx-auto space-y-10">
+      {
+        experiences.map((exp) => (
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6">
+            <div>
+              <div class="flex justify-between items-center gap-4 mb-2">
+                <h3 class="text-lg font-bold">
+                  {exp.role}{" "}
+                  <span class="text-gray-400 font-medium">
+                    {lang === "es" ? "en" : "at"}
+                  </span>{" "}
+                  <span class="font-bold">{exp.company}</span>
+                </h3>
+
+                <div class="text-gray-400 text-sm md:text-base whitespace-nowrap text-right">
+                  {exp.date}
+                </div>
+              </div>
+
+              <p class="text-gray-400 leading-relaxed text-base">
+                {exp.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

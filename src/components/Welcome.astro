@@ -1,0 +1,86 @@
+---
+import { getTranslations } from "../utils/i18n";
+
+import ReactIcon from "../assets/developer-icons/reactjs.svg";
+import TypeScriptIcon from "../assets/developer-icons/typescript.svg";
+import HtmlIcon from "../assets/developer-icons/html5.svg";
+import CssIcon from "../assets/developer-icons/css3.svg";
+import ArrowDownIcon from "../assets/arrow-down-solid-full.svg";
+
+const icons = [
+  {
+    name: "React",
+    icon: ReactIcon,
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScriptIcon,
+  },
+  {
+    name: "HTML5",
+    icon: HtmlIcon,
+  },
+  {
+    name: "CSS3",
+    icon: CssIcon,
+  },
+];
+
+const t = getTranslations(Astro.url);
+---
+
+<section id="home">
+  <div class="pb-28 pt-[200px]">
+    <h1 class="text-6xl font-bold text-center mb-2.5">
+      {t.welcome.title}
+    </h1>
+    <p class="text-2xl text-center font-semibold mb-5">{t.welcome.subtitle}</p>
+
+    <p class="text-center text-gray-400">
+      {t.welcome.description}
+    </p>
+
+    <div class="flex justify-center my-8">
+      <a
+        href="#contact"
+        class="px-6 p-3 bg-white text-black rounded-4xl hover:bg-gray-200 transition-colors font-bold"
+        >{t.welcome.contact}</a
+      >
+    </div>
+
+    <div>
+      <p class="text-lg text-center font-semibold mb-3.5">
+        {t.welcome.experienceWith}
+      </p>
+
+      <div class="flex justify-center gap-5 mb-5">
+        {
+          icons.map((icon) => (
+            <div class="flex items-center gap-1">
+              <icon.icon
+                class="w-8 h-8 !fill-transparent"
+                role="img"
+                aria-labelledby={`${icon.name}-title`}
+              />
+              <span id={`${icon.name}-title`} class="sr-only">
+                {icon.name}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+
+      <a
+        href="#experience"
+        aria-label={t.welcome.scrollToExperience}
+        class="flex items-center justify-center"
+      >
+        <div
+          class="animate-bounce flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
+        >
+          <ArrowDownIcon role="img" aria-hidden="true" />
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

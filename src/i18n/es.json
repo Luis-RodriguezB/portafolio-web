@@ -1,0 +1,37 @@
+{
+  "header": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "menu-btn": "Menú"
+  },
+  "welcome": {
+    "title": "¡Hola, soy Luis Rodríguez!",
+    "subtitle": "Desarrollador Frontend",
+    "description": "Soy un Desarrollador Frontend con 4 años de experiencia en la creación de aplicaciones web modernas, escalables y centradas en el usuario. Me especializo en React, con un fuerte enfoque en el rendimiento, la arquitectura limpia y las experiencias de usuario intuitivas.",
+    "contact": "Contáctame",
+    "experienceWith": "Experiencia con",
+    "scrollToExperience": "Ir a experiencia"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "experiences": [
+      {
+        "company": "Novacomp",
+        "role": "Ingeniero de Software",
+        "date": "Dic 2024 – Presente",
+        "description": "Ingeniero de Software enfocado en la construcción de arquitecturas escalables y aplicaciones web de alto rendimiento utilizando React. Diseño de componentes reutilizables, cumplimiento de estándares de codificación y traducción de diseños de Figma a interfaces responsivas y accesibles. Colaboración estrecha con equipos transversales para entregar soluciones limpias, mantenibles y optimizadas."
+      },
+      {
+        "company": "Accenture",
+        "role": "Desarrollador Frontend",
+        "date": "Ago 2021 – Mar 2025",
+        "description": "Desarrollador Frontend trabajando en aplicaciones web empresariales utilizando React y Vue. Construcción de componentes reutilizables, mantenimiento y refactoring de código, y colaboración directa con clientes y equipos ágiles para entregar soluciones de alta calidad en tiempo."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "No dudes en ponerte en contacto si te gustaría colaborar, hablar sobre un proyecto o simplemente saludar. Siempre estoy abierto a nuevas oportunidades, proyectos freelance y colaboraciones técnicas."
+  }
+}

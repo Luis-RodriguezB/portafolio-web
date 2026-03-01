@@ -1,0 +1,78 @@
+---
+import { getTranslations } from "../utils/i18n";
+
+const t = getTranslations(Astro.url);
+const isES = Astro.url.pathname.startsWith("/es");
+---
+
+<header class="fixed top-0 left-0 right-0 z-50">
+  <div
+    class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-end md:justify-between"
+  >
+    <div class="flex-1"></div>
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-20 font-semibold text-slate-200">
+        <li><a href="#home" class="hover:text-cyan-400">{t.header.home}</a></li>
+        <li>
+          <a href="#experience" class="hover:text-cyan-400"
+            >{t.header.experience}</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-cyan-400">{t.header.contact}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hidden md:flex flex-1 justify-end gap-2">
+      <a href="/" class={isES ? "font-normal" : "font-bold"}>EN</a> |
+      <a href="/es" class={isES ? "font-bold" : "font-normal"}>ES</a>
+    </div>
+
+    <button
+      id="menu-btn"
+      class="md:hidden text-slate-200 focus:outline-none"
+      aria-label={t.header["menu-btn"]}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="md:hidden hidden">
+    <ul class="flex flex-col items-center gap-6 font-semibold text-slate-200">
+      <li><a href="#home">{t.header.home}</a></li>
+      <li><a href="#experience">{t.header.experience}</a></li>
+      <li><a href="#contact">{t.header.contact}</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-lang" class="hidden md:hidden py-6">
+    <div class="flex justify-center gap-2">
+      <a href="/" class={isES ? "font-normal" : "font-bold"}>EN</a> |
+      <a href="/es" class={isES ? "font-bold" : "font-normal"}>ES</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const lang = document.getElementById("mobile-lang");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+    lang?.classList.toggle("hidden");
+  });
+</script>

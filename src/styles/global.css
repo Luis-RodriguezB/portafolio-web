@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #161513;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+section {
+  z-index: 1;
+}
+
+header,
+footer {
+  color: #ffffff;
+  background-color: #222222;
+  z-index: 50;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+
+  > div {
+    width: 100%;
+  }
+}
+
+section.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+svg {
+  fill: currentColor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background: radial-gradient(
+      900px circle at var(--x, 50%) var(--y, 50%),
+      rgba(56, 189, 248, 0.1),
+      transparent 45%
+    );
+  }
+}
