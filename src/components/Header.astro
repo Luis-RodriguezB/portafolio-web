@@ -9,9 +9,7 @@ const isES = Astro.url.pathname.startsWith("/es");
   class="fixed top-0 left-0 right-0 z-50 border-b border-transparent transition-all duration-300"
   id="site-header"
 >
-  <div
-    class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between"
-  >
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a
       href="#home"
@@ -24,12 +22,14 @@ const isES = Astro.url.pathname.startsWith("/es");
 
     <!-- Desktop nav -->
     <nav class="hidden md:block" aria-label="Main navigation">
-      <ul class="flex items-center gap-8 font-medium text-sm text-gray-700 dark:text-slate-300">
+      <ul
+        class="flex items-center gap-8 font-medium text-sm text-gray-700 dark:text-slate-300"
+      >
         <li>
           <a
             href="#home"
             data-section="home"
-            class="nav-link py-1 border-b-2 border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200"
+            class="nav-link py-1 border-b-2 border-transparent hover:border-(--accent) hover:text-(--accent) transition-colors duration-200"
           >
             {t.header.home}
           </a>
@@ -38,7 +38,7 @@ const isES = Astro.url.pathname.startsWith("/es");
           <a
             href="#skills"
             data-section="skills"
-            class="nav-link py-1 border-b-2 border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200"
+            class="nav-link py-1 border-b-2 border-transparent hover:border-(--accent) hover:text-(--accent) transition-colors duration-200"
           >
             {t.header.skills}
           </a>
@@ -47,7 +47,7 @@ const isES = Astro.url.pathname.startsWith("/es");
           <a
             href="#experience"
             data-section="experience"
-            class="nav-link py-1 border-b-2 border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200"
+            class="nav-link py-1 border-b-2 border-transparent hover:border-(--accent) hover:text-(--accent) transition-colors duration-200"
           >
             {t.header.experience}
           </a>
@@ -56,7 +56,7 @@ const isES = Astro.url.pathname.startsWith("/es");
           <a
             href="#contact"
             data-section="contact"
-            class="nav-link py-1 border-b-2 border-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors duration-200"
+            class="nav-link py-1 border-b-2 border-transparent hover:border-(--accent) hover:text-(--accent) transition-colors duration-200"
           >
             {t.header.contact}
           </a>
@@ -68,7 +68,7 @@ const isES = Astro.url.pathname.startsWith("/es");
     <div class="hidden md:flex items-center gap-4">
       <!-- Theme toggle -->
       <button
-        class="theme-toggle-btn p-2 rounded-lg text-gray-600 dark:text-slate-300 hover:text-[var(--accent)] dark:hover:text-[var(--accent)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+        class="theme-toggle-btn p-2 rounded-lg text-gray-600 dark:text-slate-300 hover:text-(--accent) dark:hover:text-(--accent) transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label={t.header["theme-toggle"]}
       >
         <svg
@@ -96,23 +96,27 @@ const isES = Astro.url.pathname.startsWith("/es");
       </button>
 
       <!-- Language switcher -->
-      <div class="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-slate-300">
+      <div
+        class="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-slate-300"
+      >
         <a
           href="/"
-          class={`px-2 py-1 rounded transition-colors ${!isES ? "text-[var(--accent)] font-semibold" : "hover:text-[var(--accent)]"}`}
-        >EN</a>
+          class={`px-2 py-1 rounded transition-colors ${!isES ? "text-(--accent) font-semibold" : "hover:text-(--accent)"}`}
+          >EN</a
+        >
         <span class="opacity-30">|</span>
         <a
           href="/es"
-          class={`px-2 py-1 rounded transition-colors ${isES ? "text-[var(--accent)] font-semibold" : "hover:text-[var(--accent)]"}`}
-        >ES</a>
+          class={`px-2 py-1 rounded transition-colors ${isES ? "text-(--accent) font-semibold" : "hover:text-(--accent)"}`}
+          >ES</a
+        >
       </div>
     </div>
 
     <!-- Mobile controls -->
     <div class="md:hidden flex items-center gap-2">
       <button
-        class="theme-toggle-btn p-2 rounded-lg text-gray-600 dark:text-slate-300 hover:text-[var(--accent)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+        class="theme-toggle-btn p-2 rounded-lg text-gray-600 dark:text-slate-300 hover:text-(--accent) transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label={t.header["theme-toggle"]}
       >
         <svg
@@ -155,7 +159,11 @@ const isES = Astro.url.pathname.startsWith("/es");
           stroke="currentColor"
           aria-hidden="true"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
         <svg
           id="menu-icon-close"
@@ -166,7 +174,11 @@ const isES = Astro.url.pathname.startsWith("/es");
           stroke="currentColor"
           aria-hidden="true"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
@@ -175,34 +187,56 @@ const isES = Astro.url.pathname.startsWith("/es");
   <!-- Mobile menu -->
   <div
     id="mobile-menu"
-    class="md:hidden hidden border-t border-[var(--card-border)]"
+    class="md:hidden hidden border-t border-(--card-border)"
     style="background: var(--header-bg); backdrop-filter: blur(12px);"
   >
     <nav aria-label="Mobile navigation">
-      <ul class="flex flex-col py-4 px-5 gap-1 font-medium text-gray-700 dark:text-slate-200">
+      <ul
+        class="flex flex-col py-4 px-5 gap-1 font-medium text-gray-700 dark:text-slate-200"
+      >
         <li>
-          <a href="#home" class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-[var(--code-bg)] hover:text-[var(--accent)] transition-colors" onclick="closeMobileMenu()">{t.header.home}</a>
+          <a
+            href="#home"
+            class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-(--code-bg) hover:text-(--accent) transition-colors"
+            onclick="closeMobileMenu()">{t.header.home}</a
+          >
         </li>
         <li>
-          <a href="#skills" class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-[var(--code-bg)] hover:text-[var(--accent)] transition-colors" onclick="closeMobileMenu()">{t.header.skills}</a>
+          <a
+            href="#skills"
+            class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-(--code-bg) hover:text-(--accent) transition-colors"
+            onclick="closeMobileMenu()">{t.header.skills}</a
+          >
         </li>
         <li>
-          <a href="#experience" class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-[var(--code-bg)] hover:text-[var(--accent)] transition-colors" onclick="closeMobileMenu()">{t.header.experience}</a>
+          <a
+            href="#experience"
+            class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-(--code-bg) hover:text-(--accent) transition-colors"
+            onclick="closeMobileMenu()">{t.header.experience}</a
+          >
         </li>
         <li>
-          <a href="#contact" class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-[var(--code-bg)] hover:text-[var(--accent)] transition-colors" onclick="closeMobileMenu()">{t.header.contact}</a>
+          <a
+            href="#contact"
+            class="mobile-nav-link flex items-center py-3 px-2 rounded-lg hover:bg-(--code-bg) hover:text-(--accent) transition-colors"
+            onclick="closeMobileMenu()">{t.header.contact}</a
+          >
         </li>
       </ul>
-      <div class="flex justify-center gap-2 py-4 border-t border-[var(--card-border)] text-sm font-medium text-gray-600 dark:text-slate-300">
+      <div
+        class="flex justify-center gap-2 py-4 border-t border-(--card-border) text-sm font-medium text-gray-600 dark:text-slate-300"
+      >
         <a
           href="/"
-          class={`px-3 py-1 rounded transition-colors ${!isES ? "text-[var(--accent)] font-semibold" : "hover:text-[var(--accent)]"}`}
-        >EN</a>
+          class={`px-3 py-1 rounded transition-colors ${!isES ? "text-(--accent) font-semibold" : "hover:text-(--accent)"}`}
+          >EN</a
+        >
         <span class="opacity-30 self-center">|</span>
         <a
           href="/es"
-          class={`px-3 py-1 rounded transition-colors ${isES ? "text-[var(--accent)] font-semibold" : "hover:text-[var(--accent)]"}`}
-        >ES</a>
+          class={`px-3 py-1 rounded transition-colors ${isES ? "text-(--accent) font-semibold" : "hover:text-(--accent)"}`}
+          >ES</a
+        >
       </div>
     </nav>
   </div>
@@ -255,7 +289,9 @@ const isES = Astro.url.pathname.startsWith("/es");
 
   // Active nav link via IntersectionObserver
   const sectionIds = ["home", "skills", "experience", "contact"];
-  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-link[data-section]");
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>(
+    ".nav-link[data-section]",
+  );
 
   function setActiveLink(id: string) {
     navLinks.forEach((link) => {
@@ -277,7 +313,7 @@ const isES = Astro.url.pathname.startsWith("/es");
         }
       });
     },
-    { rootMargin: "-40% 0px -55% 0px" }
+    { rootMargin: "-40% 0px -55% 0px" },
   );
 
   sectionIds.forEach((id) => {
