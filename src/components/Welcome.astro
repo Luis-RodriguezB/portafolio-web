@@ -19,28 +19,37 @@ const t = getTranslations(Astro.url);
 <section id="home">
   <div class="py-24 pt-28 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
       <!-- Left: Text content -->
       <div>
         <!-- Available badge -->
-        <div class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full text-sm font-medium border border-[var(--card-border)] bg-[var(--card-bg)]" style="color: var(--muted)">
-          <span class="pulse-dot w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+        <div
+          class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full text-sm font-medium border border-(--card-border) bg-(--card-bg)"
+          style="color: var(--muted)"
+        >
+          <span class="pulse-dot w-2 h-2 rounded-full bg-green-500 shrink-0"
+          ></span>
           {t.welcome.available}
         </div>
 
         <!-- Name -->
-        <h1 class="text-5xl lg:text-6xl font-bold mb-3 text-gray-900 dark:text-white leading-tight">
+        <h1
+          class="text-5xl lg:text-6xl font-bold mb-3 text-gray-900 dark:text-white leading-tight"
+        >
           Hi, I'm<br />
           <span>Luis Rodríguez</span>
         </h1>
 
         <!-- Subtitle with syntax coloring -->
         <p class="text-2xl lg:text-3xl font-semibold mb-6 font-mono">
-          <span style="color: var(--accent)">&lt;</span><span class="text-gray-800 dark:text-slate-200">Frontend Developer</span><span style="color: var(--accent)">&nbsp;/&gt;</span>
+          <span style="color: var(--accent)">&lt;</span><span
+            class="text-gray-800 dark:text-slate-200">Frontend Developer</span
+          ><span style="color: var(--accent)">&nbsp;/&gt;</span>
         </p>
 
         <!-- Description -->
-        <p class="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-lg">
+        <p
+          class="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-lg"
+        >
           {t.welcome.description}
         </p>
 
@@ -54,7 +63,7 @@ const t = getTranslations(Astro.url);
           </a>
           <a
             href="#experience"
-            class="px-6 py-3 rounded-lg font-semibold text-sm transition-colors border border-[var(--card-border)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-gray-700 dark:text-slate-200"
+            class="px-6 py-3 rounded-lg font-semibold text-sm transition-colors border border-(--card-border) hover:border-(--accent) hover:text-(--accent) text-gray-700 dark:text-slate-200"
           >
             {t.welcome.viewWork} ↓
           </a>
@@ -66,11 +75,13 @@ const t = getTranslations(Astro.url);
             icons.map((icon) => (
               <div class="flex flex-col items-center gap-1.5">
                 <icon.icon
-                  class="w-9 h-9 !fill-transparent"
+                  class="w-9 h-9 fill-transparent!"
                   role="img"
                   aria-label={icon.name}
                 />
-                <span class="text-xs font-mono text-gray-500 dark:text-gray-400">{icon.name}</span>
+                <span class="text-xs font-mono text-gray-500 dark:text-gray-400">
+                  {icon.name}
+                </span>
               </div>
             ))
           }
@@ -93,13 +104,22 @@ const t = getTranslations(Astro.url);
             <div><span class="prompt">$</span> <span>whoami</span></div>
             <div class="output">Luis Rodríguez</div>
 
-            <div class="mt-2"><span class="prompt">$</span> <span>cat role.txt</span></div>
+            <div class="mt-2">
+              <span class="prompt">$</span>
+              <span>cat role.txt</span>
+            </div>
             <div class="output">Frontend Developer</div>
 
-            <div class="mt-2"><span class="prompt">$</span> <span>cat experience.txt</span></div>
+            <div class="mt-2">
+              <span class="prompt">$</span>
+              <span>cat experience.txt</span>
+            </div>
             <div class="output">4+ years building web apps</div>
 
-            <div class="mt-2"><span class="prompt">$</span> <span>ls skills/</span></div>
+            <div class="mt-2">
+              <span class="prompt">$</span>
+              <span>ls skills/</span>
+            </div>
             <div class="output">
               <span class="accent">react</span>&nbsp;&nbsp;
               <span class="accent">typescript</span>&nbsp;&nbsp;
@@ -113,11 +133,14 @@ const t = getTranslations(Astro.url);
               <span class="accent">figma</span>
             </div>
 
-            <div class="mt-2"><span class="prompt">$</span> <span id="terminal-prompt">&nbsp;</span><span class="cursor-blink"></span></div>
+            <div class="mt-2">
+              <span class="prompt">$</span>
+              <span id="terminal-prompt">&nbsp;</span><span class="cursor-blink"
+              ></span>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
