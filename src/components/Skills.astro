@@ -21,6 +21,7 @@ const backendSkills = [
 ];
 
 const toolSkills = [
+  { name: "AI-Assisted Development", accent: true },
   { name: "Git", accent: false },
   { name: "Postman", accent: true },
   { name: "Figma", accent: false },
@@ -56,25 +57,6 @@ const toolSkills = [
         </div>
       </div>
 
-      <!-- Tools & Workflow -->
-      <div class="card p-6">
-        <h3
-          class="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
-          style="color: var(--accent)"
-        >
-          {t.skills.tools}
-        </h3>
-        <div class="flex flex-wrap gap-2">
-          {
-            toolSkills.map((skill) => (
-              <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
-                {skill.name}
-              </span>
-            ))
-          }
-        </div>
-      </div>
-
       <!-- Backend -->
       <div class="card p-6">
         <h3
@@ -86,6 +68,25 @@ const toolSkills = [
         <div class="flex flex-wrap gap-2">
           {
             backendSkills.map((skill) => (
+              <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
+                {skill.name}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Tools & Workflow -->
+      <div class="card p-6">
+        <h3
+          class="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
+          style="color: var(--accent)"
+        >
+          {t.skills.tools}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {
+            toolSkills.map((skill) => (
               <span class={`tag ${skill.accent ? "tag-accent" : ""}`}>
                 {skill.name}
               </span>
